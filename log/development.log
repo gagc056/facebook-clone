@@ -166,3 +166,27 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (3.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(8130582414369199050)[0m
   [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8130582414369199050)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8130582414369199050)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-01-15 20:49:40 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 145ms (Views: 130.9ms | ActiveRecord: 0.0ms | Allocations: 13607)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-15 20:49:54 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 205)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 528)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 38.5ms | Allocations: 8306)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 78.2ms | ActiveRecord: 4.9ms | Allocations: 23090)
+
+
