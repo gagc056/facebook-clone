@@ -152,3 +152,17 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 264ms (Views: 250.8ms | ActiveRecord: 0.0ms | Allocations: 5583)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8130582414369199050)[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20200115203901)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "content" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200115203901"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(8130582414369199050)[0m
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
