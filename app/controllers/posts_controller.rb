@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find_by(id: current_user.id)
-    @post = @user.post.build(post_params)
+    @post = @user.posts.build(post_params)
     if @post.save
       flash[:success] = "Post created"
       redirect_to posts_path
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content)
+    params.permit(:content)
   end
 
 end

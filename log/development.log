@@ -276,3 +276,173 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "moraless10@gmail.com"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2020-01-16 10:32:01 -0500
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 167.4ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4337ms (Views: 3961.0ms | ActiveRecord: 0.0ms | Allocations: 26453)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 10:33:07 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 123.1ms | Allocations: 2109)
+  Rendered posts/new.html.erb within layouts/application (Duration: 262.1ms | Allocations: 2422)
+Completed 500 Internal Server Error in 1171ms (ActiveRecord: 67.5ms | Allocations: 9078)
+
+
+  
+ActionView::Template::Error (undefined method `posts' for nil:NilClass):
+    1: <%= form_with(model: [@user, @user.posts.build], url: posts_path, local: true) do |f| %>
+    2:   <%= f.text_area :content, placeholder: 'What are you thinking about?' %> <br/>
+    3:   <%= f.submit 'Post' %>
+    4: <% end %>
+  
+app/views/posts/_form.html.erb:1
+app/views/posts/new.html.erb:5
+Started GET "/posts/new" for ::1 at 2020-01-16 10:33:11 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.2ms | Allocations: 1400)
+  Rendered posts/new.html.erb within layouts/application (Duration: 280.4ms | Allocations: 2798)
+Completed 500 Internal Server Error in 519ms (ActiveRecord: 0.0ms | Allocations: 17226)
+
+
+  
+ActionView::Template::Error (undefined method `posts' for nil:NilClass):
+    1: <%= form_with(model: [@user, @user.posts.build], url: posts_path, local: true) do |f| %>
+    2:   <%= f.text_area :content, placeholder: 'What are you thinking about?' %> <br/>
+    3:   <%= f.submit 'Post' %>
+    4: <% end %>
+  
+app/views/posts/_form.html.erb:1
+app/views/posts/new.html.erb:5
+Started GET "/posts/new" for ::1 at 2020-01-16 10:34:55 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 124.5ms | Allocations: 1101)
+  Rendered posts/new.html.erb within layouts/application (Duration: 157.1ms | Allocations: 1404)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 486ms (Views: 476.5ms | ActiveRecord: 0.0ms | Allocations: 7423)
+
+
+Started POST "/posts" for ::1 at 2020-01-16 10:35:14 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"16xfDtIFonk4Ue5ZHJYIjfNM6fIeGO9sNnr1gyceDOPtAXOCJDEOaj8HBxE25UpPXRvzLVNZJndcZZG+WhZSxA==", "content"=>"Testing", "commit"=>"Post"}
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 615ms (ActiveRecord: 82.8ms | Allocations: 13726)
+
+
+  
+NoMethodError (undefined method `post' for #<User:0x000000000b499c28>
+Did you mean?  posts):
+  
+app/controllers/posts_controller.rb:14:in `create'
+Started POST "/posts" for ::1 at 2020-01-16 10:35:44 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"16xfDtIFonk4Ue5ZHJYIjfNM6fIeGO9sNnr1gyceDOPtAXOCJDEOaj8HBxE25UpPXRvzLVNZJndcZZG+WhZSxA==", "content"=>"Testing", "commit"=>"Post"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+Completed 400 Bad Request in 809ms (ActiveRecord: 87.5ms | Allocations: 14770)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:31:in `post_params'
+app/controllers/posts_controller.rb:14:in `create'
+Started POST "/posts" for ::1 at 2020-01-16 10:36:26 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"16xfDtIFonk4Ue5ZHJYIjfNM6fIeGO9sNnr1gyceDOPtAXOCJDEOaj8HBxE25UpPXRvzLVNZJndcZZG+WhZSxA==", "content"=>"Testing", "commit"=>"Post"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[36mPost Create (54.5ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Testing"], ["user_id", 1], ["created_at", "2020-01-16 15:36:28.732414"], ["updated_at", "2020-01-16 15:36:28.732414"]]
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15:in `create'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 1893ms (ActiveRecord: 85.1ms | Allocations: 19308)
+
+
+Started GET "/posts" for ::1 at 2020-01-16 10:36:30 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 430ms (Views: 424.6ms | ActiveRecord: 0.0ms | Allocations: 5384)
+
+
+Started GET "/posts" for ::1 at 2020-01-16 10:36:58 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 886ms (Views: 883.5ms | ActiveRecord: 0.0ms | Allocations: 4990)
+
+
+Started GET "/posts" for ::1 at 2020-01-16 10:38:33 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 188.6ms | Allocations: 2077)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 1.5ms | Allocations: 3493)
+
+
+  
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+     6:   <% @posts.each do |post| %>
+     7:     <article>
+     8:       <p>
+     9:         <%= @post.content %>
+    10:       </p>
+    11:       <span>
+    12:         By: <%= @post.user.name %>
+  
+app/views/posts/index.html.erb:9
+app/views/posts/index.html.erb:6
+Started GET "/posts" for ::1 at 2020-01-16 10:38:50 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 107.4ms | Allocations: 2063)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 0.8ms | Allocations: 3477)
+
+
+  
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+     6:   <% @posts.each do |post| %>
+     7:     <article>
+     8:       <p>
+     9:         <%= @post.content %>
+    10:       </p>
+    11:       <span>
+    12:         By: <%= @post.user.first_name %>
+  
+app/views/posts/index.html.erb:9
+app/views/posts/index.html.erb:6
+Started GET "/posts" for ::1 at 2020-01-16 10:39:12 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 324.7ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 647ms (Views: 638.3ms | ActiveRecord: 2.7ms | Allocations: 7781)
+
+
