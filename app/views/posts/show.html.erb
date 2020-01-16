@@ -8,5 +8,26 @@
 
 </article>
 
-<%= form_with(model: @comments, url: posts_path, local: true) do |c| %>
+
+<h3>
+  Create a comment:
+</h3>
+<%= form_with(model: @comment, url: comments_path, local: true) do |f| %>
+  <%= f.text_area :content, placeholder: 'Write something...' %>
+  <%= f.submit 'Comment' %>
+<% end %>
+
+
+<ul>
+  <% @post.comments.right_order.each do |comment| %>
+    <li>
+      <p>
+        <%= comment.content%>
+      </p>
+      <span>
+        <%= comment.commenter.first_name %>
+      </span>
+    </li>
+  <% end %>
+</ul>
 
