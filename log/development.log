@@ -1327,3 +1327,263 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 107ms (Views: 80.5ms | ActiveRecord: 2.8ms | Allocations: 11054)
 
 
+Started GET "/" for ::1 at 2020-01-16 19:29:59 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 515)
+Completed 200 OK in 209ms (Views: 194.8ms | ActiveRecord: 0.0ms | Allocations: 14203)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 19:30:06 -0300
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 527)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-16 19:30:06 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 618)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 42.3ms | Allocations: 8142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 111ms (Views: 89.9ms | ActiveRecord: 11.1ms | Allocations: 24271)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 19:30:36 -0300
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 446)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-16 19:30:36 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 104)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 6351)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 19:32:03 -0300
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 1459)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-16 19:32:03 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 51ms (Views: 39.7ms | ActiveRecord: 3.0ms | Allocations: 14685)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 19:33:14 -0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 1746)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-16 19:33:15 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 623)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 40.1ms | Allocations: 8382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 438)
+Completed 200 OK in 196ms (Views: 181.3ms | ActiveRecord: 5.3ms | Allocations: 30707)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-01-16 19:33:28 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3f44rcBtxpZCLdKOrItP9lvIVIzqM3eg/BDIygEt+qjWVqHbF6HHyGyJ2uiVarJlIxL1V3OFNMdwIW01i7bhQQ==", "user"=>{"email"=>"klop@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "klop@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 165ms (ActiveRecord: 2.1ms | Allocations: 6751)
+
+
+Started GET "/" for ::1 at 2020-01-16 19:33:28 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 1141)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.4ms | Allocations: 6821)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 19:33:33 -0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:38:in `require_login'
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.9ms | Allocations: 1069)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 188)
+Completed 200 OK in 68ms (Views: 47.6ms | ActiveRecord: 2.9ms | Allocations: 12078)
+
+
+Started GET "/users/1" for ::1 at 2020-01-16 19:33:34 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 1131)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.6ms | Allocations: 7448)
+
+
+Started GET "/posts" for ::1 at 2020-01-16 19:33:36 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 4451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 16.6ms | Allocations: 1130)
+Completed 200 OK in 83ms (Views: 78.8ms | ActiveRecord: 2.3ms | Allocations: 10505)
+
+
+Started GET "/posts" for ::1 at 2020-01-16 19:33:38 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 5.0ms | Allocations: 1119)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.9ms | Allocations: 7375)
+
+
+Started GET "/" for ::1 at 2020-01-16 19:33:39 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 1129)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.3ms | Allocations: 5986)
+
+
+Started GET "/" for ::1 at 2020-01-16 19:33:40 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 1118)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.2ms | Allocations: 5951)
+
+
+Started GET "/" for ::1 at 2020-01-16 19:33:42 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 1118)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.2ms | Allocations: 5959)
+
+
+Started GET "/users" for ::1 at 2020-01-16 19:33:43 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 1129)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.7ms | Allocations: 6920)
+
+
+Started GET "/users" for ::1 at 2020-01-16 19:33:44 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 1118)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.6ms | Allocations: 6608)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-16 19:33:54 -0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:38:in `require_login'
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.4ms | Allocations: 780)
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.2ms | Allocations: 6685)
+
+
+Started POST "/posts" for ::1 at 2020-01-16 19:34:04 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"MlR3OXb41oJViQ6O4jJcdi23jb1JNJinuQkyvCHV9W/x26sgCHCnMRNC+8Asxr8uWoldUrBqvy+J0w3vRi5spQ==", "content"=>"fourth post", "commit"=>"Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:38:in `require_login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "fourth post"], ["user_id", 1], ["created_at", "2020-01-16 22:34:04.231849"], ["updated_at", "2020-01-16 22:34:04.231849"]]
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17:in `create'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 26ms (ActiveRecord: 3.2ms | Allocations: 6609)
+
+
+Started GET "/posts" for ::1 at 2020-01-16 19:34:04 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:12
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2055)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 1118)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.8ms | Allocations: 8043)
+
+
