@@ -1,0 +1,29 @@
+<header>
+
+  <% if current_user %>
+    <%= link_to('Home', root_path) %> | 
+
+    <%= link_to('Feed', posts_path)%> | 
+
+    <%= link_to('Friends', '#') %> | 
+
+    <%= link_to('Search Friends', users_path) %> | 
+
+    <%= link_to('Notifications', '#') %> | 
+
+    <%= link_to('Post', new_post_path) %> | 
+
+    <%= link_to('Profile', user_path(current_user.id)) %> | 
+
+    <%= link_to('Log out', destroy_user_session_path, method: :delete) %>
+
+  <% else %>
+   
+  <%= link_to('Sign Up', new_user_registration_path) %> |
+
+  <%= link_to('Sign In', user_session_path) %>
+
+  <% end %>
+  
+
+</header>

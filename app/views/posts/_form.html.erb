@@ -1,0 +1,4 @@
+<%= form_with(model: @posts, url: posts_path, local: true) do |f| %>
+  <%= f.text_area :content, placeholder: 'What are you thinking about?' %> <br/>
+  <%= f.submit 'Post' %>
+<% end %>
