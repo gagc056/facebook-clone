@@ -18,12 +18,12 @@ class User < ApplicationRecord
   validates :gender, presence: true, inclusion: { in: %w[male female] }
 
   def friends
-    friends= friendships.map {|friendship| friendship.friend if friendship.status}
+    friends = friendships.map { |friendship| friendship.friend if friendship.status }
     friends.compact
   end
 
   def friendship_request
-    friends= friendships.map {|friendship| friendship.friend if !friendship.status}
+    friends = friendships.map { |friendship| friendship.friend unless friendship.status }
     friends.compact
   end
 end
