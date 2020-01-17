@@ -1,0 +1,14 @@
+
+<h3>
+  You have <%= pluralize(@friendship_request.count, 'notification') %>
+</h3>
+
+<% @friendship_request.each do |request| %>
+  <li>
+    <%= request.first_name %>
+    <%= form_with(model: request, local: true, method: :patch) do |f|%>
+      <%= f.hidden_field :status, :value => true %>
+      <%= f.submit 'Accept'%>
+    <% end %>
+  </li>
+<% end %>

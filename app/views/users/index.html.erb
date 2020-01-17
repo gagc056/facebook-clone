@@ -2,7 +2,11 @@
   <% @users.each do |user| %>
   
     <li>
-      <%=user.first_name %>
+      <%= link_to("#{user.first_name}", user_path(user))%>
+      <%= form_with(model: @friendship, local: true) do |f| %>
+      <%= f.hidden_field :friend_id, :value => user.id %>
+      <%= f.submit 'Add Friend' %>
+      <% end %>
     </li>
   <% end %>
 </ul>

@@ -1,41 +1,57 @@
 # frozen_string_literal: true
 
 class FriendshipsController < ApplicationController
+
+
   def new
     @friendship = Friendship.new
   end
 
   def create
+    @friend = User.find(frienship_params[:friend_id])
     @user = current_user
-    @friendship = @user.friendships.build(friendship_params)
+    @friendship = @friend.friendships.build(friend_id: @user.id)
     if @friendship.save
       flash[:success] = 'your friend request was send it '
     else
       flash[:error] = 'you canot send a friend request'
     end
-    redirect_to notification_path
+    redirect_to notifications_path
   end
 
   def show
-    @friendship = Friendship.find(params[:id])
+    @friendship = Friendship.find(1)
   end
 
   def index
-    @friendships = Friendship.all
+    @friendship_request = current_user.friendship_request
   end
 
   def edit
-    @friendship = Friendship.find(params[:id])
+    @friendship = Friendship.find(params[:friendship[:friend_id]])
   end
 
   def update
-    @friendship = friendship.find(params[:friendship_id])
-    @friendship.status.update(status: params[:status])
+    @friend = User.find(frienship_params[:id])
+    @friendship = @friend.friendships.find_by(user_id: current_user.id, friend_id: @friend.id)
+
+    @friendship.update(status: frienship_status[:status])
     if @friendship.save
       flash[:success] = 'your have a new friend '
     else
       flash[:error] = 'error, try again'
     end
-    redirect_to notification_path
+    redirect_to notifications_path
   end
+
+  private
+
+  def frienship_params
+    params.require(:friendship).permit(:friend_id)
+  end
+
+  def frienship_status
+    params.require(:friendship).permit(:status)
+  end
+
 end

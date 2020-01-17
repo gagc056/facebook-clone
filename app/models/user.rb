@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def friendship_request
-    friends = friendships.map { |friendship| friendship.friend unless friendship.status }
+    friends = friendships.map { |friendship| friendship.friend if !friendship.status }
     friends.compact
   end
 end
