@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :post_comment, class_name: 'Post'
-  belongs_to :commenter, class_name: 'User'
+  belongs_to :post_comment, foreign_key: 'post_id'  ,class_name: 'Post'
+  belongs_to :commenter, foreign_key: 'user_id', class_name: 'User'
 
 end
