@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
   has_many :post_comments, through: :comments, class_name: 'Post'
+  has_many :likes
+  has_many :post_likes, through: :likes
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
   validates :date_birth, presence: true
