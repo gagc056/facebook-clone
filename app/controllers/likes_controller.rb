@@ -1,14 +1,16 @@
-class LikesController < ApplicationController
+# frozen_string_literal: true
 
+class LikesController < ApplicationController
   before_action :find_like, only: [:destroy]
 
-  def  new 
+  def new
     @like = Like.new
   end
+
   def create
-      @post=Post.find_by(id: params[:post_id])
-      @like = @post.likes << current_user.likes.build
-      redirect_to post_path(@post)
+    @post = Post.find_by(id: params[:post_id])
+    @like = @post.likes << current_user.likes.build
+    redirect_to post_path(@post)
   end
 
   def destroy
@@ -19,7 +21,7 @@ class LikesController < ApplicationController
   private
 
   def find_like
-    @post=Post.find_by(id: params[:post_id])
+    @post = Post.find_by(id: params[:post_id])
     @like = @post.likes.find(params[:id])
-  end 
+  end
 end
