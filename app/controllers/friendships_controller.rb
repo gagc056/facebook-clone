@@ -33,7 +33,7 @@ class FriendshipsController < ApplicationController
 
   def update
     @friend = User.find(params[:id])
-    @friendship = current_user.friendships.where(user_id: current_user.id, friend_id: @friend.id)
+    @friendship = current_user.friendships.find_by(friend_id: @friend.id)
 
     @friendship.update(status: !@friendship.status)
     if @friendship.save
