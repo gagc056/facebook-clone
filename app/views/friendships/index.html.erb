@@ -6,9 +6,6 @@
 <% @friendship_request.each do |request| %>
   <li>
     <%= request.first_name %>
-    <%= form_with(model: request, local: true, method: :patch) do |f|%>
-      <%= f.hidden_field :status, :value => true %>
-      <%= f.submit 'Accept'%>
-    <% end %>
+    <%= link_to('Accept Request', friendship_path(request.friendships.find_by(friend_id: 1).id), :method=> :put) %>
   </li>
 <% end %>
