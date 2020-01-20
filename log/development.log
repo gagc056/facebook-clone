@@ -16563,3 +16563,121 @@ Completed 500 Internal Server Error in 151ms (ActiveRecord: 1.6ms | Allocations:
 NoMethodError (undefined method `status' for #<ActiveRecord::AssociationRelation []>):
   
 app/controllers/friendships_controller.rb:38:in `update'
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE DATABASE "facebook_development" ENCODING = 'unicode'[0m
+  [1m[35m (1886.8ms)[0m  [1m[35mCREATE DATABASE "facebook_test" ENCODING = 'unicode'[0m
+  [1m[35m (13.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (2.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (37.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (66.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "user" character varying, "references" character varying, "post_id" bigint NOT NULL, "content" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_post_id" ON "comments"  ("post_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35m (9.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendships" CASCADE[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "friendships" ("id" bigserial primary key, "user_id" integer, "friend_id" integer, "status" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (28.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "post_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_post_id" ON "likes"  ("post_id")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_user_id" ON "likes"  ("user_id")[0m
+  [1m[35m (16.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (23.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "content" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35m (20.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (23.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "date_birth" date, "gender" character varying, "user_img" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (14.2ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_87a8aac469"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+[0m
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "39e68c067921f1a2d8d71e67b36ad75754deb04b"], ["created_at", "2020-01-20 22:17:16.416988"], ["updated_at", "2020-01-20 22:17:16.416988"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (77.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "user" character varying, "references" character varying, "post_id" bigint NOT NULL, "content" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_post_id" ON "comments"  ("post_id")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendships" CASCADE[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "friendships" ("id" bigserial primary key, "user_id" integer, "friend_id" integer, "status" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" bigint NOT NULL, "post_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_post_id" ON "likes"  ("post_id")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE  INDEX  "index_likes_on_user_id" ON "likes"  ("user_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "content" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "first_name" character varying, "last_name" character varying, "date_birth" date, "gender" character varying, "user_img" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (19.3ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (11.4ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_87a8aac469"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+[0m
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200117223612)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200115191212),
+(20200115203901),
+(20200116195624),
+(20200116195951),
+(20200116234759),
+(20200116234835),
+(20200116235125);
+
+[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-20 22:17:17.153135"], ["updated_at", "2020-01-20 22:17:17.153135"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-20 22:17:17.170450"], ["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "39e68c067921f1a2d8d71e67b36ad75754deb04b"], ["created_at", "2020-01-20 22:17:17.185408"], ["updated_at", "2020-01-20 22:17:17.185408"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
