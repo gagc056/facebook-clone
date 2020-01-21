@@ -41,7 +41,7 @@ class FriendshipsController < ApplicationController
     else
       flash[:error] = 'error, try again'
     end
-    redirect_to notifications_path
+    redirect_to frienship_path
   end
 
   private

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :friendships, except: %i[index]
   
   get '/notifications', to: 'friendships#index'
+  patch "/friendship", to: "friendships#update"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
