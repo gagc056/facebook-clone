@@ -15,6 +15,7 @@ node_modules
 /log/*
 /tmp/*
 !/log/.keep
+log/development.log
 !/tmp/.keep
 
 # Ignore uploaded files in development.
