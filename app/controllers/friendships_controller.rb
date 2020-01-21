@@ -28,7 +28,7 @@ class FriendshipsController < ApplicationController
   end
 
   def edit
-    @friendship = Friendship.find(params[:friendship[:friend_id]])
+    @friendship = Friendship.find(params[:id])
   end
 
   def update
