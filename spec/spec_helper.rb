@@ -21,7 +21,6 @@ require 'factory_bot_rails'
 require 'devise'
 
 RSpec.configure do |config|
-
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FactoryBot::Syntax::Methods
   config.include Warden::Test::Helpers
