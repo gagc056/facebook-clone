@@ -32,16 +32,16 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friend = User.find(frienship_params[:id])
-    @friendship = @friend.friendships.find_by(user_id: current_user.id, friend_id: @friend.id)
+    @friend = User.find(params[:id])
+    @friendship = current_user.friendships.find_by( friend_id: @friend.id)
 
-    @friendship.update(status: frienship_status[:status])
+    @friendship.update(status:true)
     if @friendship.save
       flash[:success] = 'your have a new friend '
     else
       flash[:error] = 'error, try again'
     end
-    redirect_to frienship_path
+    redirect_to notifications_path
   end
 
   private

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   end
   resources :users, only: %i[show index]
   resources :friendships, except: %i[index]
+
+
   
   get '/notifications', to: 'friendships#index'
   patch "/friendship", to: "friendships#update"
