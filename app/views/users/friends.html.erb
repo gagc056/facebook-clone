@@ -1,0 +1,15 @@
+
+<h2>
+  Friends
+</h2>
+
+<ul>
+
+  <% @friends.each do |friend| %>
+
+    <li>
+      <%= link_to("#{friend.first_name} #{friend.last_name}", friend) %>
+    </li>
+
+  <% end %>
+</ul>

@@ -17015,3 +17015,88 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 765ms (Views: 487.6ms | ActiveRecord: 17.0ms | Allocations: 15103)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8130582414369199050)[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(8130582414369199050)[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-01-21 15:01:16 -0500
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 34.7ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 308.2ms | Allocations: 9224)
+Completed 200 OK in 732ms (Views: 677.4ms | ActiveRecord: 10.3ms | Allocations: 17784)
+
+
+Started GET "/users/1" for ::1 at 2020-01-21 15:01:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 124.5ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 10.8ms | Allocations: 1140)
+Completed 200 OK in 400ms (Views: 377.8ms | ActiveRecord: 1.7ms | Allocations: 8521)
+
+
+Started GET "/notifications" for ::1 at 2020-01-21 15:01:57 -0500
+Processing by FriendshipsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/friendships_controller.rb:27:in `index'
+  [1m[36mFriendship Load (3.2ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:26:in `map'
+  Rendering friendships/index.html.erb within layouts/application
+  Rendered friendships/index.html.erb within layouts/application (Duration: 101.9ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 213)
+Completed 200 OK in 424ms (Views: 218.0ms | ActiveRecord: 43.5ms | Allocations: 13443)
+
+
+Started GET "/users" for ::1 at 2020-01-21 15:01:59 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/index.html.erb within layouts/application (Duration: 317.2ms | Allocations: 1517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:3
+  Rendered layouts/_header.html.erb (Duration: 16.3ms | Allocations: 1125)
+Completed 200 OK in 562ms (Views: 522.7ms | ActiveRecord: 14.9ms | Allocations: 12036)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-01-21 15:02:04 -0500
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yld1lJmo5yQE/hnC01pSk9si0lQbx/b956q30aUeT2Vg0R55nn98p+BOdSmWVEpwjn0nTU3xCW0qjkUocsYhbA=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 1.0ms | Allocations: 7957)
+
+
+Started GET "/" for ::1 at 2020-01-21 15:02:04 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 8.8ms | Allocations: 163)
+Completed 200 OK in 98ms (Views: 93.9ms | ActiveRecord: 0.0ms | Allocations: 6077)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-21 15:02:10 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 76.4ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 198.4ms | Allocations: 527)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 719.1ms | Allocations: 5165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 110)
+Completed 200 OK in 1032ms (Views: 1027.5ms | ActiveRecord: 0.0ms | Allocations: 13327)
+
+
