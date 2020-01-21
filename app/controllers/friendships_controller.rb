@@ -33,9 +33,9 @@ class FriendshipsController < ApplicationController
 
   def update
     @friend = User.find(params[:id])
-    @friendship = current_user.friendships.find_by(friend_id: @friend.id)
+    @friendship = current_user.friendships.find_by( friend_id: @friend.id)
 
-    @friendship.update(status: !@friendship.status)
+    @friendship.update(status:true)
     if @friendship.save
       flash[:success] = 'your have a new friend '
     else

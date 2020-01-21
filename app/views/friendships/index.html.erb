@@ -6,6 +6,6 @@
 <% @friendship_request.each do |request| %>
   <li>
     <%= request.first_name %>
-    <%= link_to('Accept Request', friendship_path(request.friendships.find_by(friend_id: 1).id), :method=> :put) %>
+    <%= link_to 'add friend', friendship_path(request), :method=> :put %>
   </li>
 <% end %>
