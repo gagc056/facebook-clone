@@ -4,8 +4,12 @@
 </h3>
 
 <% @friendship_request.each do |request| %>
-  <li>
-    <%= request.first_name %>
-    <%= link_to 'add friend', friendship_path(request), :method=> :put %>
-  </li>
+
+    <li>
+      <%= request.first_name %>
+      <%= link_to 'add friend', friendship_path(request), :method=> :put %>
+    </li>
+ 
+
+ 
 <% end %>
