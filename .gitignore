@@ -31,6 +31,7 @@ pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/log/*.log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
@@ -148,3 +149,4 @@ build-iPhoneSimulator/
 .history
 
 # End of https://www.gitignore.io/api/git,ruby,rails,visualstudiocode
+/log/development.log
