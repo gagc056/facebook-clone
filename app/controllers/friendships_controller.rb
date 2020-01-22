@@ -11,8 +11,8 @@ class FriendshipsController < ApplicationController
     @friend = User.find(frienship_params[:friend_id])
     @user = current_user
     @friendship = @user.friendships.build(friend_id: @friend.id)
-
-    if @friendship.save
+    @inverse_friendship = @friend.inverse_friendships.build(user_id: @user.id)
+    if @friendship.save && @inverse_friendship
       flash[:success] = 'your friend request was send it '
     else
       flash[:error] = 'you canot send a friend request'
@@ -26,6 +26,7 @@ class FriendshipsController < ApplicationController
 
   def index
     @friendship_request = current_user.friendship_request
+    @pending_friends = current_user.pending_friends
   end
 
   def edit
@@ -34,10 +35,14 @@ class FriendshipsController < ApplicationController
 
   def update
     @friend = User.find(params[:id])
-    @friendship = current_user.friendships.find_by( friend_id: @friend.id)
+    @friendship = current_user.inverse_friendships.find_by(user_id: @friend.id)
+    @inverse_friendship = @friend.friendships.find_by(friend_id: current_user.id)
 
     @friendship.update(status:true)
-    if @friendship.save
+    @inverse_friendship.update(status:true)
+
+
+    if @friendship.save && @inverse_friendship 
       flash[:success] = 'your have a new friend '
     else
       flash[:error] = 'error, try again'
