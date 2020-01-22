@@ -24,8 +24,5 @@ class User < ApplicationRecord
     friends.compact
   end
 
-  def friendship_request
-    friends = friendships.map { |friendship| friendship.user if friendship.status }
-    friends.compact
-  end
+  
 end
