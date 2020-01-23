@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class FriendshipsController < ApplicationController
+  before_action :friendship_exists, only: [:new, :create]
+
   def new
     @friendship = Friendship.new
   end
@@ -57,5 +59,18 @@ class FriendshipsController < ApplicationController
 
   def frienship_status
     params.require(:friendship).permit(:status)
+  end
+
+  def friendship_exists
+    @friend = User.find(frienship_params[:friend_id])
+    @user = current_user
+
+    @friendship = current_user.inverse_friendships.find_by(user_id: @friend.id, friend_id: current_user.id)
+    @inverse_friendship = @friend.friendships.find_by(user_id: @friend.id, friend_id: current_user.id)
+
+    unless @friendship.nil? && @inverse_friendship.nil?
+      flash[:error] = "You can`t send a friendship request to #{@friend.first_name}"
+      redirect_to users_path
+    end
   end
 end
