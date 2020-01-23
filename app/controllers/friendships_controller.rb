@@ -42,7 +42,7 @@ class FriendshipsController < ApplicationController
     @inverse_friendship.update(status: true)
 
     if @friendship.save && @inverse_friendship
-      flash[:success] = 'your have a new friend '
+      flash[:success] = "#{@friend.first_name} and you are friends!"
     else
       flash[:error] = 'error, try again'
     end

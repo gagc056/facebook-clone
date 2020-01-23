@@ -29173,3 +29173,32 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 502ms (Views: 489.1ms | ActiveRecord: 1.8ms | Allocations: 8701)
 
 
+Started GET "/notifications" for ::1 at 2020-01-23 15:21:50 -0500
+Processing by FriendshipsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/friendships_controller.rb:28:in `index'
+  [1m[36mFriendship Load (0.4ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friend_id" = $1[0m  [["friend_id", 2]]
+  ↳ app/models/user.rb:28:in `map'
+  [1m[36mFriendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:32:in `map'
+  Rendering friendships/index.html.erb within layouts/application
+  Rendered friendships/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 16)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 231)
+Completed 200 OK in 97ms (Views: 80.6ms | ActiveRecord: 1.4ms | Allocations: 8393)
+
+
+Started GET "/posts/new" for ::1 at 2020-01-23 15:21:51 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:37:in `require_login'
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 57.1ms | Allocations: 1069)
+  Rendered posts/new.html.erb within layouts/application (Duration: 73.8ms | Allocations: 1427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mFriendship Load (0.5ms)[0m  [1m[34mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friend_id" = $1[0m  [["friend_id", 2]]
+  ↳ app/models/user.rb:28:in `map'
+  Rendered layouts/_header.html.erb (Duration: 5.7ms | Allocations: 934)
+Completed 200 OK in 227ms (Views: 167.2ms | ActiveRecord: 9.6ms | Allocations: 15430)
+
+
