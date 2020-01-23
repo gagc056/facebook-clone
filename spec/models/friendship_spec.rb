@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Friendship, type: :model do
@@ -33,12 +35,12 @@ RSpec.describe Friendship, type: :model do
     expect(friendship).to be_valid
   end
 
-  it 'validates if has an friend' do   
+  it 'validates if has an friend' do
     friendship.friend = nil
     expect(friendship).to_not be_valid
   end
 
-  it 'receives a friend request' do   
+  it 'receives a friend request' do
     user.friendships.build(friend_id: friend.id)
     expect(user.friendships.first.friend).to eq(friend)
   end

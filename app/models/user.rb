@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :post_likes, through: :likes
   has_many :friendships
-  has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
+  has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
   validates :date_birth, presence: true
@@ -25,10 +25,10 @@ class User < ApplicationRecord
   end
 
   def friendship_request
-    inverse_friendships.map { |friendship| friendship.user if !friendship.status }.compact
+    inverse_friendships.map { |friendship| friendship.user unless friendship.status }.compact
   end
 
   def pending_friends
-    friendships.map { |friendship| friendship.friend if !friendship.status }.compact
+    friendships.map { |friendship| friendship.friend unless friendship.status }.compact
   end
 end

@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class FriendshipsController < ApplicationController
-
-
   def new
     @friendship = Friendship.new
   end
@@ -38,11 +36,10 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.inverse_friendships.find_by(user_id: @friend.id)
     @inverse_friendship = @friend.friendships.find_by(friend_id: current_user.id)
 
-    @friendship.update(status:true)
-    @inverse_friendship.update(status:true)
+    @friendship.update(status: true)
+    @inverse_friendship.update(status: true)
 
-
-    if @friendship.save && @inverse_friendship 
+    if @friendship.save && @inverse_friendship
       flash[:success] = 'your have a new friend '
     else
       flash[:error] = 'error, try again'
@@ -59,5 +56,4 @@ class FriendshipsController < ApplicationController
   def frienship_status
     params.require(:friendship).permit(:status)
   end
-
 end
