@@ -10,7 +10,7 @@ RSpec.describe Post, type: :model do
       email: 'tevez@gmail.com',
       password: '12345',
       password_confirmation: '12345',
-      date_birth: 19 / 7 / 1980,
+      date_birth: '19/7/1980',
       gender: 'male'
     )
   end
