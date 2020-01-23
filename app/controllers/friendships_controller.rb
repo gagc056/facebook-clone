@@ -10,10 +10,12 @@ class FriendshipsController < ApplicationController
     @user = current_user
     @friendship = @user.friendships.build(friend_id: @friend.id)
     @inverse_friendship = @friend.inverse_friendships.build(user_id: @user.id)
-    if @friendship.save && @inverse_friendship
+    if @friend == @user
+      flash[:error] = 'you cannot send a friend request to yourself'
+    elsif @friendship.save && @inverse_friendship
       flash[:success] = 'your friend request was send it '
     else
-      flash[:error] = 'you canot send a friend request'
+      flash[:error] = 'you cannot send a friend request'
     end
     redirect_to notifications_path
   end
