@@ -15,7 +15,6 @@ class User < ApplicationRecord
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
-  validates :gender, inclusion: { in: %w[male female] }
 
   def friends
     friends = friendships.map { |friendship| friendship.friend if friendship.status }
@@ -43,8 +42,8 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      user.first_name = auth.info.name
-      user.last_name = auth.info.name   # assuming the user model has a name
+      user.first_name = auth.info.name.split(' ')[0]
+      user.last_name = auth.info.name.split(' ')[1]   # assuming the user model has a name
       user.user_img = auth.info.image # assuming the user model has an image
     end
   end
