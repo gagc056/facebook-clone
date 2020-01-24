@@ -30874,3 +30874,628 @@ Processing by FriendshipsController#index as HTML
 Completed 200 OK in 241ms (Views: 214.2ms | ActiveRecord: 3.6ms | Allocations: 8405)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8130582414369199050)[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOmniauthColumnsToUsers (20200124154132)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "users" ADD "uuid" character varying[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200124154132"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(8130582414369199050)[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-01-24 10:51:39 -0500
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 27.3ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 90.5ms | Allocations: 531)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 593.5ms | Allocations: 10043)
+Started GET "/users/sign_up" for ::1 at 2020-01-24 10:51:41 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 184.1ms | Allocations: 1972)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 133.7ms | Allocations: 477)
+Completed 200 OK in 2455ms (Views: 2362.8ms | ActiveRecord: 23.2ms | Allocations: 56556)
+
+
+  Rendered layouts/_header.html.erb (Duration: 191.7ms | Allocations: 560)
+Completed 200 OK in 840ms (Views: 831.4ms | ActiveRecord: 0.0ms | Allocations: 12850)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 10:52:36 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 1704.6ms | Allocations: 190796)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1792.0ms | Allocations: 192730)
+Completed 500 Internal Server Error in 1974ms (ActiveRecord: 110.9ms | Allocations: 203154)
+
+
+  
+ActionView::Template::Error (undefined method `omniauth_authorize_path' for #<#<Class:0x000000000b676d98>:0x000000000b68bf40>):
+    20: 
+    21: <%- if devise_mapping.omniauthable? %>
+    22:   <%- resource_class.omniauth_providers.each do |provider| %>
+    23:     <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    24:   <% end %>
+    25: <% end %>
+  
+app/views/devise/shared/_links.html.erb:23
+app/views/devise/shared/_links.html.erb:22:in `each'
+app/views/devise/shared/_links.html.erb:22
+app/views/devise/registrations/new.html.erb:49
+Started GET "/users/sign_up" for ::1 at 2020-01-24 10:53:46 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 2179.7ms | Allocations: 190193)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2241.1ms | Allocations: 192151)
+Completed 500 Internal Server Error in 2393ms (ActiveRecord: 14.9ms | Allocations: 202531)
+
+
+  
+ActionView::Template::Error (undefined method `omniauth_authorize_path' for #<#<Class:0x0000000008824bc0>:0x0000000008834250>):
+    20: 
+    21: <%- if devise_mapping.omniauthable? %>
+    22:   <%- resource_class.omniauth_providers.each do |provider| %>
+    23:     <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    24:   <% end %>
+    25: <% end %>
+  
+app/views/devise/shared/_links.html.erb:23
+app/views/devise/shared/_links.html.erb:22:in `each'
+app/views/devise/shared/_links.html.erb:22
+app/views/devise/registrations/new.html.erb:49
+Started GET "/users/sign_up" for ::1 at 2020-01-24 10:53:59 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 2811.2ms | Allocations: 190209)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2845.0ms | Allocations: 192075)
+Completed 500 Internal Server Error in 2920ms (ActiveRecord: 0.0ms | Allocations: 192858)
+
+
+  
+ActionView::Template::Error (undefined method `omniauth_authorize_path' for #<#<Class:0x0000000008824bc0>:0x0000000007645a30>):
+    20: 
+    21: <%- if devise_mapping.omniauthable? %>
+    22:   <%- resource_class.omniauth_providers.each do |provider| %>
+    23:     <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    24:   <% end %>
+    25: <% end %>
+  
+app/views/devise/shared/_links.html.erb:23
+app/views/devise/shared/_links.html.erb:22:in `each'
+app/views/devise/shared/_links.html.erb:22
+app/views/devise/registrations/new.html.erb:49
+Started GET "/users/sign_up" for ::1 at 2020-01-24 10:57:37 -0500
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 1161.2ms | Allocations: 188424)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1341.2ms | Allocations: 197922)
+Completed 500 Internal Server Error in 1485ms (ActiveRecord: 21.3ms | Allocations: 212257)
+
+
+  
+ActionView::Template::Error (undefined method `omniauth_authorize_path' for #<#<Class:0x000000000b1bdc20>:0x0000000008297d60>):
+    20: 
+    21: <%- if devise_mapping.omniauthable? %>
+    22:   <%- resource_class.omniauth_providers.each do |provider| %>
+    23:     <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    24:   <% end %>
+    25: <% end %>
+  
+app/views/devise/shared/_links.html.erb:23
+app/views/devise/shared/_links.html.erb:22:in `each'
+app/views/devise/shared/_links.html.erb:22
+app/views/devise/registrations/new.html.erb:49
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:00:44 -0500
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 194.6ms | Allocations: 10132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 441)
+Completed 200 OK in 900ms (Views: 820.0ms | ActiveRecord: 22.6ms | Allocations: 38442)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:00:49 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:00:50 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:03:57 -0500
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:03:59 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:13:39 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:13:40 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:15:22 -0500
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:15:23 -0500
+Started GET "/users/auth/facebook/callback?code=AQBiGQGRenJ6b9-vleOvZ_fpHKwdOGe9LPK1TgrdAgCAb2zQzjoEzUhSJ-qqSXyAMZoWfnBZVfB3crzucIYI1B07Edlrhau3P9yMkewGuksnFc5UjBrVVFnCDJ3QZjjclf37Kty0tGD8xsCMMob-muy2IN6tdBfksIXXF6B6qxAUT64xixk4hfKhdnu3iXMAMKsH4bCXSPiiCnDxFnZ7uU7u-XgMpqjxPP0ddV9Ddva8biz9N0mSMh2rCvIuh1uCq2RYonIhLKRIyxe4B1uv2GUmuCLZUGEqtiHVYsffFY8nW4OjGLUP_jwpi5xpdKm_z_bG_AYzhXy9bQWX060HspYP&state=56593a8c54c4cbcf2bbb8215f24f2baf7a4513258cb51436" for ::1 at 2020-01-24 11:15:24 -0500
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQBiGQGRenJ6b9-vleOvZ_fpHKwdOGe9LPK1TgrdAgCAb2zQzjoEzUhSJ-qqSXyAMZoWfnBZVfB3crzucIYI1B07Edlrhau3P9yMkewGuksnFc5UjBrVVFnCDJ3QZjjclf37Kty0tGD8xsCMMob-muy2IN6tdBfksIXXF6B6qxAUT64xixk4hfKhdnu3iXMAMKsH4bCXSPiiCnDxFnZ7uU7u-XgMpqjxPP0ddV9Ddva8biz9N0mSMh2rCvIuh1uCq2RYonIhLKRIyxe4B1uv2GUmuCLZUGEqtiHVYsffFY8nW4OjGLUP_jwpi5xpdKm_z_bG_AYzhXy9bQWX060HspYP", "state"=>"56593a8c54c4cbcf2bbb8215f24f2baf7a4513258cb51436"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 0.0ms | Allocations: 667)
+
+
+Started GET "/" for ::1 at 2020-01-24 11:15:25 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 22.0ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 13.0ms | Allocations: 492)
+Completed 200 OK in 619ms (Views: 588.8ms | ActiveRecord: 0.0ms | Allocations: 16962)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:16:58 -0500
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.8ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 5.9ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 321.3ms | Allocations: 10133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 441)
+Completed 200 OK in 1270ms (Views: 1140.1ms | ActiveRecord: 21.3ms | Allocations: 38437)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:17:06 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:17:07 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:20:56 -0500
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:20:58 -0500
+Started GET "/users/auth/facebook/callback?code=AQAcAgKkgZS21rhqp_whnknrDd9UYuPY0p9rT5E8Prwx1hgS5bR2ToKyY8JlHWQZLkNqb6sNp78skKBOsqP5j0zt3ORruuXKjlj89W9K6y1l67eDdkWqKYPD6tppqq0wbUIHq_nRIlJzYcmlVsqk1b4dTe0PkWyGtF9Hs71i-c3eYeVVbL4iM-YK6NkNXjDn_5374do0yaHHJTnb0Tp6A1Ytb-sv_-Ef6PJKi1UvVhHnx6C-1c1PWHPHtxc8XtrrWNNimLZbcAMqSWF3aYZkIf2MSg9-maX6XOogoV0M3zYTHhyhZrfbvtrfTBI-mHYnZ8l_lm2Nd7NOXfWk6pUPlABg&state=be237428046c2f54e9d2d0d3b0aa359abab810bdbc9bc6da" for ::1 at 2020-01-24 11:20:58 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAcAgKkgZS21rhqp_whnknrDd9UYuPY0p9rT5E8Prwx1hgS5bR2ToKyY8JlHWQZLkNqb6sNp78skKBOsqP5j0zt3ORruuXKjlj89W9K6y1l67eDdkWqKYPD6tppqq0wbUIHq_nRIlJzYcmlVsqk1b4dTe0PkWyGtF9Hs71i-c3eYeVVbL4iM-YK6NkNXjDn_5374do0yaHHJTnb0Tp6A1Ytb-sv_-Ef6PJKi1UvVhHnx6C-1c1PWHPHtxc8XtrrWNNimLZbcAMqSWF3aYZkIf2MSg9-maX6XOogoV0M3zYTHhyhZrfbvtrfTBI-mHYnZ8l_lm2Nd7NOXfWk6pUPlABg", "state"=>"be237428046c2f54e9d2d0d3b0aa359abab810bdbc9bc6da"}
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 26.4ms | Allocations: 3392)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  no existe la columna users.uid
+LINE 1: ....* FROM "users" WHERE "users"."provider" = $1 AND "users"."u...
+                                                             ^
+HINT:  Probablemente quiera hacer referencia a la columna «users.id» o la columna «users.uuid».
+):
+  
+app/models/user.rb:44:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:7:in `facebook'
+Started PUT "/__web_console/repl_sessions/55759f135319ae4d0155789c5d617fcc" for ::1 at 2020-01-24 11:21:28 -0500
+Started PUT "/__web_console/repl_sessions/55759f135319ae4d0155789c5d617fcc" for ::1 at 2020-01-24 11:21:28 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8130582414369199050)[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUuidToUsers (20200124162335)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200124162335"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8130582414369199050)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:27:35 -0500
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:27:39 -0500
+Started GET "/users/auth/facebook/callback?code=AQBwzqopmnquMbFLCZXVG-E-cJczRUZC1IwbEn1jB89ykXg6HBj68gNvQIs-iWaeEA-qQQ29-9KnXdQQb6gYRx7cH-bTqxLyzflqd9lOQ8YkcEIIitaO49PyO0qCWkfDQJkd0vzbGTKJ-kT4F1MyfVoHAfv4QW6mTwULLyAB5LtjOsmogiwl2Agho1hN9vO5mMOyKUy-0ot0Z8vmCAdos5vvvRH5m7fPPsqYC5Sa7rkpolqVpHvOsGESsH9aU6rcdY7dHxkOHLSzUdIOiLCp2lzFKcNltV1GDSUBNkjukGp2sy6Jl29oe7RE5MfNF--N6U4d_hmQCsHXrYckUEvb7FU1&state=cc89869cb3afc41ed8b594c5eb3329157273922644c1381f" for ::1 at 2020-01-24 11:27:40 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBwzqopmnquMbFLCZXVG-E-cJczRUZC1IwbEn1jB89ykXg6HBj68gNvQIs-iWaeEA-qQQ29-9KnXdQQb6gYRx7cH-bTqxLyzflqd9lOQ8YkcEIIitaO49PyO0qCWkfDQJkd0vzbGTKJ-kT4F1MyfVoHAfv4QW6mTwULLyAB5LtjOsmogiwl2Agho1hN9vO5mMOyKUy-0ot0Z8vmCAdos5vvvRH5m7fPPsqYC5Sa7rkpolqVpHvOsGESsH9aU6rcdY7dHxkOHLSzUdIOiLCp2lzFKcNltV1GDSUBNkjukGp2sy6Jl29oe7RE5MfNF--N6U4d_hmQCsHXrYckUEvb7FU1", "state"=>"cc89869cb3afc41ed8b594c5eb3329157273922644c1381f"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 7.9ms | Allocations: 11054)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'uid' for User.):
+  
+app/models/user.rb:44:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:7:in `facebook'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:28:46 -0500
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:28:47 -0500
+Started GET "/users/auth/facebook/callback?code=AQBU8Vks4mcjrPL74x2BgUTmbKgK_3iSeVxvM4OmywdO3Hg8_Fo6meoWewLC6gWNqEElrE1xIr5zfQmtHoBPPv029v2ywPfvzEKLjBAP-k3pZnt02olAO3cjNQnZz8p6Gjn9T0-9d6fEAeDinNMDEMfL3pWA1jcAaFkOrUItkDFcHv8AAIUdanPO1NbEVuuSMTOM502ZUrkIUK81Zk8ue4xyxC-DdoIHVVS5hErAmAfX99O3ciZA5meLY3Y1U7RFqC8NKC0KkqiY1B3JtAQ1RwphHofrgfqIbsQx9qlxquyGcKNgahBJ7Vj-5w-DY_HmeNMqo9WnP2gVk4fX7SlMwMI5&state=6bf1b8de354d27f450f82471790a528102ff308220189876" for ::1 at 2020-01-24 11:28:48 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBU8Vks4mcjrPL74x2BgUTmbKgK_3iSeVxvM4OmywdO3Hg8_Fo6meoWewLC6gWNqEElrE1xIr5zfQmtHoBPPv029v2ywPfvzEKLjBAP-k3pZnt02olAO3cjNQnZz8p6Gjn9T0-9d6fEAeDinNMDEMfL3pWA1jcAaFkOrUItkDFcHv8AAIUdanPO1NbEVuuSMTOM502ZUrkIUK81Zk8ue4xyxC-DdoIHVVS5hErAmAfX99O3ciZA5meLY3Y1U7RFqC8NKC0KkqiY1B3JtAQ1RwphHofrgfqIbsQx9qlxquyGcKNgahBJ7Vj-5w-DY_HmeNMqo9WnP2gVk4fX7SlMwMI5", "state"=>"6bf1b8de354d27f450f82471790a528102ff308220189876"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Completed 500 Internal Server Error in 700ms (ActiveRecord: 23.7ms | Allocations: 16702)
+
+
+  
+NoMethodError (undefined method `name=' for #<User:0x000000000b4db178>):
+  
+app/models/user.rb:47:in `block in from_omniauth'
+app/models/user.rb:44:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:7:in `facebook'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:30:46 -0500
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:30:47 -0500
+Started GET "/users/auth/facebook/callback?code=AQD0r8tvs3VcnYyzbmJW_Qb5_UA01DJ4mhWKXw3UUCwLSQYSCgeu-3fSSmL4HbR6Bdbkf5R7KIh48V7rENNpMWhipxFrHljXzXmU-Q416YZe_JFwBit1CotrU5abZMwSDMeuYVVfW_dLDzkWmRbhThLeT3EtIXs3KwTLjogZman7j38rA3P_mgWd1BC4s9BBzCLamVEIsT-nPVpEjGnQeGaqu6yhv6_2BnxVa0mRBBTPBFYJLRAMij9MepNlQAQUG-nR3G0v-7_tJO1Mkg8dMSlf1t4IghLXPWM4n1Bg1OjCj1Nfer0p9Hfvarps7bHG1scJmcBj9biaIpLKjhLTh63-&state=d5c3616a7d9341c769b07218618ac69cb3c0a3d5b6ab682c" for ::1 at 2020-01-24 11:30:48 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQD0r8tvs3VcnYyzbmJW_Qb5_UA01DJ4mhWKXw3UUCwLSQYSCgeu-3fSSmL4HbR6Bdbkf5R7KIh48V7rENNpMWhipxFrHljXzXmU-Q416YZe_JFwBit1CotrU5abZMwSDMeuYVVfW_dLDzkWmRbhThLeT3EtIXs3KwTLjogZman7j38rA3P_mgWd1BC4s9BBzCLamVEIsT-nPVpEjGnQeGaqu6yhv6_2BnxVa0mRBBTPBFYJLRAMij9MepNlQAQUG-nR3G0v-7_tJO1Mkg8dMSlf1t4IghLXPWM4n1Bg1OjCj1Nfer0p9Hfvarps7bHG1scJmcBj9biaIpLKjhLTh63-", "state"=>"d5c3616a7d9341c769b07218618ac69cb3c0a3d5b6ab682c"}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Completed 500 Internal Server Error in 496ms (ActiveRecord: 25.4ms | Allocations: 16719)
+
+
+  
+NoMethodError (undefined method `image=' for #<User:0x000000000b34c500>):
+  
+app/models/user.rb:49:in `block in from_omniauth'
+app/models/user.rb:44:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:7:in `facebook'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:32:10 -0500
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:32:11 -0500
+Started GET "/users/auth/facebook/callback?code=AQBLDvs7fAS6ONnMUj27DZpnB9MfJap8TkF4UDvLyrcuPeYAqPL66bIUDhE5noR4ISQh0Sp7wizLJNXqeAZ_ev3BhFw52RAa8YSezem5or0Bb48SlvZkig1d0dcXuLFOpAK8pPpjrYcazYB-UJdr-XKaNhb0DAUGF8zYKNxMDTqTjP-6UnivSj1VTgTDlp_86VXwI6XYZfivXgj6OddIOeY5w6ACn98n-ovyTw1qAV7Pm15S7Eveb6Asqnvp9koG7v9kStcIss55OKcK6dd_JgNIoyM6rzuiw9GWpQ_y3QH2jpR7M-6ZOs49gG5meRrHGx4On-0Ac2TlwENP5ECVF4QP&state=46cfd5828244a2511b9b0be8b475edc3ef1ceebaf3419334" for ::1 at 2020-01-24 11:32:12 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBLDvs7fAS6ONnMUj27DZpnB9MfJap8TkF4UDvLyrcuPeYAqPL66bIUDhE5noR4ISQh0Sp7wizLJNXqeAZ_ev3BhFw52RAa8YSezem5or0Bb48SlvZkig1d0dcXuLFOpAK8pPpjrYcazYB-UJdr-XKaNhb0DAUGF8zYKNxMDTqTjP-6UnivSj1VTgTDlp_86VXwI6XYZfivXgj6OddIOeY5w6ACn98n-ovyTw1qAV7Pm15S7Eveb6Asqnvp9koG7v9kStcIss55OKcK6dd_JgNIoyM6rzuiw9GWpQ_y3QH2jpR7M-6ZOs49gG5meRrHGx4On-0Ac2TlwENP5ECVF4QP", "state"=>"46cfd5828244a2511b9b0be8b475edc3ef1ceebaf3419334"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 728ms (ActiveRecord: 19.3ms | Allocations: 22248)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:32:14 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 130.8ms | Allocations: 5576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 439)
+Completed 200 OK in 738ms (Views: 732.4ms | ActiveRecord: 0.0ms | Allocations: 23626)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:32:21 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:32:21 -0500
+Started GET "/users/auth/facebook/callback?code=AQCkxsDenpEcVMgzg3wiHUCZihiopPGPRW1t5xqBiWvVe8OLxeYTKC39G66YxB1oBtQydVm6zZnlvxMiJXRFXFMnS21lu13Hj0fKNd5NJXtd8wq_82AKvr3THB_kpgrg2f-nQPH4bxekvK3GgHeJUxp5CFAx0soO50Ft4WTEUfSLjo3ZVwQeBesC7kvyNTgTbbG5BkomlBtewOqgHbaeeF-GX3nO2d9HAIRlpASjEgjsU77jiBhOexOTfS7QFRHqbB3EZDQf6mBUtZYf2ikIXo14qAvioyFxPCZv5bqtShJo2IHMZz_uktTEEAYPkT9UnCEnC8K1CAf4tnwaKZSWdxwE&state=3b74f190de0eb1a93c1f902e70bc4a40ee999f80b36b1169" for ::1 at 2020-01-24 11:32:22 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCkxsDenpEcVMgzg3wiHUCZihiopPGPRW1t5xqBiWvVe8OLxeYTKC39G66YxB1oBtQydVm6zZnlvxMiJXRFXFMnS21lu13Hj0fKNd5NJXtd8wq_82AKvr3THB_kpgrg2f-nQPH4bxekvK3GgHeJUxp5CFAx0soO50Ft4WTEUfSLjo3ZVwQeBesC7kvyNTgTbbG5BkomlBtewOqgHbaeeF-GX3nO2d9HAIRlpASjEgjsU77jiBhOexOTfS7QFRHqbB3EZDQf6mBUtZYf2ikIXo14qAvioyFxPCZv5bqtShJo2IHMZz_uktTEEAYPkT9UnCEnC8K1CAf4tnwaKZSWdxwE", "state"=>"3b74f190de0eb1a93c1f902e70bc4a40ee999f80b36b1169"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 539ms (ActiveRecord: 1.5ms | Allocations: 4350)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:32:23 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 161.3ms | Allocations: 2023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 104)
+Completed 200 OK in 355ms (Views: 352.5ms | ActiveRecord: 0.0ms | Allocations: 8408)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:32:42 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:32:43 -0500
+Started GET "/users/auth/facebook/callback?code=AQAl6OhQqJuEhO7BPLeJP1c_GQRNZh363vtfsAqblp5GuzEzuEUsSz0vX-cE2OPqwLnzHFPjaHuDOhx2RMXRURd4SC7-6Fmkr5y9X8j-wjB-hbsjcl0vPS6AtEIhDe8X_W3G7yhwAaO-0UKEvh5-Ep4hloFiiZIFJu50n3cmbUYFz-W8z40yf5Tkir6RHF9luW0u8_-ZO_nwn04GVtvNIohbTCuHch-mgOd1E8WDqH_M92D-PxKESRtjZRZYVUUmI2emRxSFvPEGGF3zNg79E0tze5h5vzYh5GSNdv37XuoAH9b8Vvwm-El3we72BjAWxaiTCqYEW_CCy49b6XrfTF1y&state=aa23942b77a621dda01b9fc314b13df9df8a7a5899e46e7b" for ::1 at 2020-01-24 11:32:44 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAl6OhQqJuEhO7BPLeJP1c_GQRNZh363vtfsAqblp5GuzEzuEUsSz0vX-cE2OPqwLnzHFPjaHuDOhx2RMXRURd4SC7-6Fmkr5y9X8j-wjB-hbsjcl0vPS6AtEIhDe8X_W3G7yhwAaO-0UKEvh5-Ep4hloFiiZIFJu50n3cmbUYFz-W8z40yf5Tkir6RHF9luW0u8_-ZO_nwn04GVtvNIohbTCuHch-mgOd1E8WDqH_M92D-PxKESRtjZRZYVUUmI2emRxSFvPEGGF3zNg79E0tze5h5vzYh5GSNdv37XuoAH9b8Vvwm-El3we72BjAWxaiTCqYEW_CCy49b6XrfTF1y", "state"=>"aa23942b77a621dda01b9fc314b13df9df8a7a5899e46e7b"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 619ms (ActiveRecord: 2.4ms | Allocations: 4366)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:32:45 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 47.1ms | Allocations: 2010)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 104)
+Completed 200 OK in 160ms (Views: 157.0ms | ActiveRecord: 0.0ms | Allocations: 8397)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:37:28 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 201)
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 540)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 91.7ms | Allocations: 3383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 417)
+Completed 200 OK in 371ms (Views: 369.6ms | ActiveRecord: 0.0ms | Allocations: 12516)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:37:35 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:37:35 -0500
+Started GET "/users/auth/facebook/callback?code=AQAZCaW75hZhXPowWE-zDCDAc7NeWoD7Z7BR5pk0wtO0-l3KEt3epQfaOgphdkan-yzsUn4JeamOE3NqrHID28I2njkrvCAeCLOQS3fKe0KVIlQAi0DjQ4k2qZSfaWxTnPW1ZYaPoO7wa362J9L0HCxx2iZmvVcBlcAFFdbwfSppbV1qPqkrrz8JH9hTU2_fZED_4CwdAtdGBwchVFXmydANtfX672czSaKxMjgbjsNxa3HKr07LUqEcc7nkQGAbIkyIJH2hTNOqPSP6xozcQRBGNYViRBJ_ifSWvVsxJAicVNrtTyDonVZotIxZzUL3H6QruDlvefIsHVHJnvijJbkf&state=3681ec0f576c03aa1c483eac3fb8a1c120761cc4a3f6dbe3" for ::1 at 2020-01-24 11:37:36 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAZCaW75hZhXPowWE-zDCDAc7NeWoD7Z7BR5pk0wtO0-l3KEt3epQfaOgphdkan-yzsUn4JeamOE3NqrHID28I2njkrvCAeCLOQS3fKe0KVIlQAi0DjQ4k2qZSfaWxTnPW1ZYaPoO7wa362J9L0HCxx2iZmvVcBlcAFFdbwfSppbV1qPqkrrz8JH9hTU2_fZED_4CwdAtdGBwchVFXmydANtfX672czSaKxMjgbjsNxa3HKr07LUqEcc7nkQGAbIkyIJH2hTNOqPSP6xozcQRBGNYViRBJ_ifSWvVsxJAicVNrtTyDonVZotIxZzUL3H6QruDlvefIsHVHJnvijJbkf", "state"=>"3681ec0f576c03aa1c483eac3fb8a1c120761cc4a3f6dbe3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 674ms (ActiveRecord: 0.8ms | Allocations: 4348)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:37:38 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 51.9ms | Allocations: 2018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 104)
+Completed 200 OK in 271ms (Views: 269.2ms | ActiveRecord: 0.0ms | Allocations: 8375)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:21 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:22 -0500
+Started GET "/users/auth/facebook/callback?code=AQA70JoaK7KZQJSue6ockhTBR1lVrV0d0FxvzDJcI6qKQv4SPVaipVtfV0DIBbqWUqEbw78IYhqS2UN6BsN-pvhFGQV4sQ5E7MrBMOqhFUcINuLMZ6CpVHTIUdGgit6whOqgUWa04fwBss8bGoRybX9Jq7psC6t59WugJkGeUEh_w01T_iTwxc-wN3Emz94224IckgcHsyKGrJWbS13MK7lFSwSLEgdYLl1dZrEHrmasWfmQe6AbFItwy-1Giki5jFg2TvuCw3KolTU9FQQoUF0jlwbzXpKcsW3a8eEYIL71pS6J_zbPbPhBv5AcCO9KmBS70ZKai420EWhsVQ6yDpyT&state=4877a3f9495d9385e48217c239a97fab67f74bb088a2a47a" for ::1 at 2020-01-24 11:40:23 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQA70JoaK7KZQJSue6ockhTBR1lVrV0d0FxvzDJcI6qKQv4SPVaipVtfV0DIBbqWUqEbw78IYhqS2UN6BsN-pvhFGQV4sQ5E7MrBMOqhFUcINuLMZ6CpVHTIUdGgit6whOqgUWa04fwBss8bGoRybX9Jq7psC6t59WugJkGeUEh_w01T_iTwxc-wN3Emz94224IckgcHsyKGrJWbS13MK7lFSwSLEgdYLl1dZrEHrmasWfmQe6AbFItwy-1Giki5jFg2TvuCw3KolTU9FQQoUF0jlwbzXpKcsW3a8eEYIL71pS6J_zbPbPhBv5AcCO9KmBS70ZKai420EWhsVQ6yDpyT", "state"=>"4877a3f9495d9385e48217c239a97fab67f74bb088a2a47a"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 553ms (ActiveRecord: 20.4ms | Allocations: 22247)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:40:24 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 112.0ms | Allocations: 5576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 439)
+Completed 200 OK in 526ms (Views: 518.6ms | ActiveRecord: 0.0ms | Allocations: 23633)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:32 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:32 -0500
+Started GET "/users/auth/facebook/callback?code=AQA_N5zq0Q3Dmj6oRs0iXd0Q5l9dH0lNMC0ZGFIHue8jjRXeyEUEVChpLuM7Jj5FVn1cYjvscHIJ9gB_lbFTPOpTWVKVukbw_1F-ubkszrYwPKSafWct0XwLjATphN1cxHP2TBP5tzoIKLTRyp5rIV8YfqtXe-_k4X-PVzJaoR64zfuSPdtxD1pxKTnQKXduB6uxXK4b1H4fdpNOJftcyZCKoP1LxWiRsoWiRX7jMf68CZnIx3SQv2R18N2zWnnkjuxokGlgQstnpNyMkb-A_q5m0icS4-utfKTA79lmw6SOnDRYPT9OyMZzuJN2i93PXS-Hma9jnLX4NQ6qwqLAP7XS&state=0ddb399ba8b0c552ca59f6c08bc4fa1724fc6c3246aec43d" for ::1 at 2020-01-24 11:40:33 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQA_N5zq0Q3Dmj6oRs0iXd0Q5l9dH0lNMC0ZGFIHue8jjRXeyEUEVChpLuM7Jj5FVn1cYjvscHIJ9gB_lbFTPOpTWVKVukbw_1F-ubkszrYwPKSafWct0XwLjATphN1cxHP2TBP5tzoIKLTRyp5rIV8YfqtXe-_k4X-PVzJaoR64zfuSPdtxD1pxKTnQKXduB6uxXK4b1H4fdpNOJftcyZCKoP1LxWiRsoWiRX7jMf68CZnIx3SQv2R18N2zWnnkjuxokGlgQstnpNyMkb-A_q5m0icS4-utfKTA79lmw6SOnDRYPT9OyMZzuJN2i93PXS-Hma9jnLX4NQ6qwqLAP7XS", "state"=>"0ddb399ba8b0c552ca59f6c08bc4fa1724fc6c3246aec43d"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 668ms (ActiveRecord: 1.0ms | Allocations: 5039)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:34 -0500
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:40:35 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:35 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 56.1ms | Allocations: 2023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 104)
+Completed 200 OK in 201ms (Views: 196.9ms | ActiveRecord: 0.0ms | Allocations: 8898)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:37 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:37 -0500
+Started GET "/users/auth/facebook/callback?code=AQBs_RNEQd-lmy4btwt3V3IQV5P54a05ty4tSO--nSqquldyYYh2_ZCpq6PSeRMnDLmSe-3f2z2D6CverE2Zw6qHT3Y_oT5OhCcVXKsHsJVksjk_5XxNogGksGiKM7cOfSfZEzXUvLV69uLv_loaFAeQLqUfxbH_w2NvLN7Q6CZnaf9QOrPKF5QeNQ0VefsSDwgQFcZSwtQOpJLsq8MjwAlIZip3Q17Gn2DSQXIdD0KEDkdBi2dYD_Gf-Zhb1coH9BsdxBr8AKHB1UFCyu-Fq18NGtF_7oTp-rFLo8uENEql6YuiL6zXuCEsUQmw_W6Cyms_eLIaamXMgceBwPmXWIv2&state=e9433e3ac7d4ae9a7c9c33ca41b3125080844cf5acc74574" for ::1 at 2020-01-24 11:40:38 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBs_RNEQd-lmy4btwt3V3IQV5P54a05ty4tSO--nSqquldyYYh2_ZCpq6PSeRMnDLmSe-3f2z2D6CverE2Zw6qHT3Y_oT5OhCcVXKsHsJVksjk_5XxNogGksGiKM7cOfSfZEzXUvLV69uLv_loaFAeQLqUfxbH_w2NvLN7Q6CZnaf9QOrPKF5QeNQ0VefsSDwgQFcZSwtQOpJLsq8MjwAlIZip3Q17Gn2DSQXIdD0KEDkdBi2dYD_Gf-Zhb1coH9BsdxBr8AKHB1UFCyu-Fq18NGtF_7oTp-rFLo8uENEql6YuiL6zXuCEsUQmw_W6Cyms_eLIaamXMgceBwPmXWIv2", "state"=>"e9433e3ac7d4ae9a7c9c33ca41b3125080844cf5acc74574"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 558ms (ActiveRecord: 7.5ms | Allocations: 4468)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:40:39 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 97.8ms | Allocations: 2010)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 104)
+Completed 200 OK in 267ms (Views: 261.0ms | ActiveRecord: 0.0ms | Allocations: 8408)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:44 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 11:40:44 -0500
+Started GET "/users/auth/facebook/callback?code=AQArOJ2XuiGiTT2NWHVZyLSPkG0AfKbdMwykA2YMZmrKSdwD59zWDm5jhYBrv21AV6FH7DxB6wKJf_XIHWuNxZQZnZJN54uXAVEQ-S6cGNDshpxonyVBhsvaKPoIQMGH2i-X1DjjwB-zHb71W4EiiH1fu5NeS-4Ebt4KKap8u_EtITGKNZMXCRtu_1IyPwR6z-USvDM8ZpN2AK22z6EwFdUu7jfdUoa7NazIHqTQi3dPENG1WFJkzxvb5P1c-aArIFccjbxRRw3XoNrdc3Jdem733Zs1vhxa7v-k6DwYrNOvS58uQRxAvNx7e4T6Mo6tIQyC4X-GtRbK5sxKuwh2FuDL&state=bf81bbc17336c53ed23c2e22b18c2e391496ba29019df0ca" for ::1 at 2020-01-24 11:40:45 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQArOJ2XuiGiTT2NWHVZyLSPkG0AfKbdMwykA2YMZmrKSdwD59zWDm5jhYBrv21AV6FH7DxB6wKJf_XIHWuNxZQZnZJN54uXAVEQ-S6cGNDshpxonyVBhsvaKPoIQMGH2i-X1DjjwB-zHb71W4EiiH1fu5NeS-4Ebt4KKap8u_EtITGKNZMXCRtu_1IyPwR6z-USvDM8ZpN2AK22z6EwFdUu7jfdUoa7NazIHqTQi3dPENG1WFJkzxvb5P1c-aArIFccjbxRRw3XoNrdc3Jdem733Zs1vhxa7v-k6DwYrNOvS58uQRxAvNx7e4T6Mo6tIQyC4X-GtRbK5sxKuwh2FuDL", "state"=>"bf81bbc17336c53ed23c2e22b18c2e391496ba29019df0ca"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 565ms (ActiveRecord: 1.5ms | Allocations: 4365)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 11:40:46 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 46.4ms | Allocations: 2010)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 22.9ms | Allocations: 104)
+Completed 200 OK in 177ms (Views: 172.9ms | ActiveRecord: 0.0ms | Allocations: 8392)
+
+
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:14:50 -0500
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 7.2ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 275.1ms | Allocations: 10130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 10.3ms | Allocations: 441)
+Completed 200 OK in 1027ms (Views: 926.6ms | ActiveRecord: 20.9ms | Allocations: 39153)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:14:55 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:14:55 -0500
+Started GET "/users/auth/facebook/callback?code=AQCwLQBif4Grs8SVhUi1BXAbgdCE334LrXOMxlkRz1DE0MBmG0IiEgms3lWMB-y8UwwymtIM9SJsweCjtlWLDrrr60zRgTrAnRwOn27aoFh4vdKpLV8nN647dzDu_8xqDCiWTyLeP34XvuG9Y0wCLijzZxeiSAN9OxFR80eeVzLQ8A2Hsaj0xfajGJoECThHxiONZ-NPwqXoXiGKfCEzus3HIziz5t0ioW7XZalOtwMIQ8NqNeBzpfEKazvkdltG830UusXAj3imYzCV0aHz5MM2EUx2zv-AfLFNDcxpXHfOUpqU2MkMoyoq-OnSkziyBHRxuOFdd6YAeBlNj68GmhPQ&state=5b99b575e475369dc3910a2a4b346ddddb724936fd22e76d" for ::1 at 2020-01-24 12:14:56 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCwLQBif4Grs8SVhUi1BXAbgdCE334LrXOMxlkRz1DE0MBmG0IiEgms3lWMB-y8UwwymtIM9SJsweCjtlWLDrrr60zRgTrAnRwOn27aoFh4vdKpLV8nN647dzDu_8xqDCiWTyLeP34XvuG9Y0wCLijzZxeiSAN9OxFR80eeVzLQ8A2Hsaj0xfajGJoECThHxiONZ-NPwqXoXiGKfCEzus3HIziz5t0ioW7XZalOtwMIQ8NqNeBzpfEKazvkdltG830UusXAj3imYzCV0aHz5MM2EUx2zv-AfLFNDcxpXHfOUpqU2MkMoyoq-OnSkziyBHRxuOFdd6YAeBlNj68GmhPQ", "state"=>"5b99b575e475369dc3910a2a4b346ddddb724936fd22e76d"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 552ms (ActiveRecord: 7.2ms | Allocations: 6022)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:14:58 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 53.0ms | Allocations: 2019)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 104)
+Completed 200 OK in 226ms (Views: 223.3ms | ActiveRecord: 0.0ms | Allocations: 8409)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:17:21 -0500
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 8.4ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 8.0ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 383.0ms | Allocations: 10134)
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:17:23 -0500
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 445)
+Completed 200 OK in 1271ms (Views: 1128.7ms | ActiveRecord: 24.9ms | Allocations: 40388)
+
+
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 124.1ms | Allocations: 2019)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 104)
+Completed 200 OK in 359ms (Views: 355.2ms | ActiveRecord: 0.0ms | Allocations: 8420)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:17:29 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:17:29 -0500
+Started GET "/users/auth/facebook/callback?code=AQAFwKnMcX6WaqYByGnM2gAy4MLObRb8b2gIrTq3cizawmnGhm2grTJiKIFZ0oGxwy7CSA9fVCkT5Zp-unnp56pUSPHV29Gbh0R-cxvK9bY8k850-KWtThWbP4OIRPR114DLBTBq6S15OqRBdm3sKJgLK7TgciYQi2CP7d-Qj7hoxKkN5FiwJ32cciXi85GBWgIDSF1wPHFpQ9r_G4XfCtbsysky93KiwYJ30bAkacl11d-oMruTmoCjjITEqr93Hypji6fgydqzYQio01F5bPBsjzJSe-Hh2gIGCEqPHCAC4tY1N4XVCbvSS251TZbIs1nSn2mokicSQFA6EQvyyqT8&state=20033871c1237598218af89c9bb896c007aa9ba29173d834" for ::1 at 2020-01-24 12:17:59 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAFwKnMcX6WaqYByGnM2gAy4MLObRb8b2gIrTq3cizawmnGhm2grTJiKIFZ0oGxwy7CSA9fVCkT5Zp-unnp56pUSPHV29Gbh0R-cxvK9bY8k850-KWtThWbP4OIRPR114DLBTBq6S15OqRBdm3sKJgLK7TgciYQi2CP7d-Qj7hoxKkN5FiwJ32cciXi85GBWgIDSF1wPHFpQ9r_G4XfCtbsysky93KiwYJ30bAkacl11d-oMruTmoCjjITEqr93Hypji6fgydqzYQio01F5bPBsjzJSe-Hh2gIGCEqPHCAC4tY1N4XVCbvSS251TZbIs1nSn2mokicSQFA6EQvyyqT8", "state"=>"20033871c1237598218af89c9bb896c007aa9ba29173d834"}
+  [1m[36mUser Load (40.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 841ms (ActiveRecord: 41.2ms | Allocations: 4643)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:18:02 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 126.2ms | Allocations: 2009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 104)
+Completed 200 OK in 434ms (Views: 429.0ms | ActiveRecord: 0.0ms | Allocations: 8396)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:21:09 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 50.6ms | Allocations: 2010)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 104)
+Completed 200 OK in 260ms (Views: 254.7ms | ActiveRecord: 0.0ms | Allocations: 8408)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:21:15 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:21:15 -0500
+Started GET "/users/auth/facebook/callback?code=AQAceoYLUdppqhTAO0uFMlynsjMJPF0HhwMOFRaQofnhL2PijEqU-ubvi7ZxNolGPJ-5lJnehOunsAKh37NRW2Fa2ina6vni-TKAO1_KqX83rcJaJfLb1Bcvexs2HDBx5a9Mc8ykmnyhkQ8S0M5clpC0VobP4JB1E9cmlIN79mr8oZF9dIjL0bxw37JiLheL5saN_zNP7eB2DdvtvI1YRvbsXwCI2LcCKhY8_US_HPhMFyC9YQmJJhFrg5Zm5gekn34-TrwZUeEKfFHMU4cEKq30ajs223q95cmdf4fBTzF2KHD2lOv5uYHvMdbtgLVHHO9QUOmNGKyUaYZWvHkTTNpu&state=136a5a6b18b4f3514b9e23d987a837d10d4d92754dd0f48f" for ::1 at 2020-01-24 12:21:16 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAceoYLUdppqhTAO0uFMlynsjMJPF0HhwMOFRaQofnhL2PijEqU-ubvi7ZxNolGPJ-5lJnehOunsAKh37NRW2Fa2ina6vni-TKAO1_KqX83rcJaJfLb1Bcvexs2HDBx5a9Mc8ykmnyhkQ8S0M5clpC0VobP4JB1E9cmlIN79mr8oZF9dIjL0bxw37JiLheL5saN_zNP7eB2DdvtvI1YRvbsXwCI2LcCKhY8_US_HPhMFyC9YQmJJhFrg5Zm5gekn34-TrwZUeEKfFHMU4cEKq30ajs223q95cmdf4fBTzF2KHD2lOv5uYHvMdbtgLVHHO9QUOmNGKyUaYZWvHkTTNpu", "state"=>"136a5a6b18b4f3514b9e23d987a837d10d4d92754dd0f48f"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mieguelguerra123456@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:43:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 614ms (ActiveRecord: 5.1ms | Allocations: 4738)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:21:18 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 121.9ms | Allocations: 2015)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 104)
+Completed 200 OK in 387ms (Views: 383.9ms | ActiveRecord: 0.0ms | Allocations: 8416)
+
+
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:23:10 -0500
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:23:11 -0500
+Started GET "/users/auth/facebook/callback?code=AQAOhbibWzavzGoGv02buFZBO54qKT0WmdDkYYCe-J1Yw7l7doDa4nM2-Va7G6-q0KkYJJvZD-izFzoiq9XSvfgGbsgidoWW78dxMpKYZE3oq6Ad_-uWxmo5HEBn_qiksChh6bJ8Kp2113sqhUhqp6l9nescVsq2hcROpAaWB3AKH7JG2UGPsQTmi299QY9AFvF9rAT_hAaGoGjyZZHACGjFYl_tuuCYfcnksjaLdE1t0PhsFSs4gdg0o4o7JPwy82wBr39DWurlJ2_Bd9QQ1merqsaF52H7tfgpHDa-D_7Lpk3k3DRHISxB76y6brAgg05ClyUoJGsSyNe30gImIgCl&state=f1b13c0525d7a46cc1bec30fcccfa5d8d3dde64e9c434b40" for ::1 at 2020-01-24 12:23:12 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAOhbibWzavzGoGv02buFZBO54qKT0WmdDkYYCe-J1Yw7l7doDa4nM2-Va7G6-q0KkYJJvZD-izFzoiq9XSvfgGbsgidoWW78dxMpKYZE3oq6Ad_-uWxmo5HEBn_qiksChh6bJ8Kp2113sqhUhqp6l9nescVsq2hcROpAaWB3AKH7JG2UGPsQTmi299QY9AFvF9rAT_hAaGoGjyZZHACGjFYl_tuuCYfcnksjaLdE1t0PhsFSs4gdg0o4o7JPwy82wBr39DWurlJ2_Bd9QQ1merqsaF52H7tfgpHDa-D_7Lpk3k3DRHISxB76y6brAgg05ClyUoJGsSyNe30gImIgCl", "state"=>"f1b13c0525d7a46cc1bec30fcccfa5d8d3dde64e9c434b40"}
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mieguelguerra123456@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:43:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 696ms (ActiveRecord: 35.4ms | Allocations: 22266)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:23:14 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 638)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 98.2ms | Allocations: 5663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 439)
+Completed 200 OK in 526ms (Views: 514.6ms | ActiveRecord: 0.0ms | Allocations: 23736)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:23:30 -0500
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 12:23:31 -0500
+Started GET "/users/auth/facebook/callback?code=AQDK-ORPkXnWvIICNmQxs1v0TFexyd3yHz5okxzvjnBuiD3uC5oa5tA7w6-jU4dk2RRed6LPYqgbWFoH6WbivLB8sF7hQzzCRJpXHUPLXRaTAzczU9_wDpUcRpgSBPhINr2wa8nquq-GKmxcoNe-gU0t0xf3sZzueg1mOV7bbBfaJNe8FeSVtoA5F8CBwSSZAoUCodU96k5VmG2ERVzs8W81K_au5wkXOyB8sZVf-OqSI2TwFAOVu8fBaWwPpYPV7iUt66fTYpPNkKIuvbj0j69yt-39qqKoi44IMTn6khaAnQDrjnXKWFFgATjpG_zBldwsUOhcJGzhiPQ7_RAd_Fqa&state=8dddad656341196c5852a096b1dbd997e0809a00199f22ff" for ::1 at 2020-01-24 12:23:41 -0500
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDK-ORPkXnWvIICNmQxs1v0TFexyd3yHz5okxzvjnBuiD3uC5oa5tA7w6-jU4dk2RRed6LPYqgbWFoH6WbivLB8sF7hQzzCRJpXHUPLXRaTAzczU9_wDpUcRpgSBPhINr2wa8nquq-GKmxcoNe-gU0t0xf3sZzueg1mOV7bbBfaJNe8FeSVtoA5F8CBwSSZAoUCodU96k5VmG2ERVzs8W81K_au5wkXOyB8sZVf-OqSI2TwFAOVu8fBaWwPpYPV7iUt66fTYpPNkKIuvbj0j69yt-39qqKoi44IMTn6khaAnQDrjnXKWFFgATjpG_zBldwsUOhcJGzhiPQ7_RAd_Fqa", "state"=>"8dddad656341196c5852a096b1dbd997e0809a00199f22ff"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "167415791244945"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mieguelguerra123456@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43:in `from_omniauth'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:43:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 367ms (ActiveRecord: 3.1ms | Allocations: 4669)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 12:23:42 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2025)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 104)
+Completed 200 OK in 130ms (Views: 128.1ms | ActiveRecord: 0.0ms | Allocations: 8442)
+
+
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "friendships"[0m
