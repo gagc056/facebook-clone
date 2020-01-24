@@ -5,12 +5,12 @@ module UsersHelper
     @friendship = Friendship.find_by(user_id: current_user.id, friend_id: friend.id)
 
     if @friendship.nil?
-      return Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
+      Friendship.find_by(user_id: friend.id, friend_id: current_user.id)
     else
-      return @friendship
+      @friendship
     end
   end
-  
+
   def search_users_list(users)
     users.select do |user|
       next if user == current_user || current_user.friends.include?(user)
