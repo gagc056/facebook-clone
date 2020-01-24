@@ -31,4 +31,10 @@ class User < ApplicationRecord
   def pending_friends
     friendships.map { |friendship| friendship.friend unless friendship.status }.compact
   end
+
+  def show_post
+    @friend_post = friends.map(&:posts).flatten
+    @friend_post += posts
+    @friend_post.flatten
+  end
 end
