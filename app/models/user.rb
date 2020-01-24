@@ -33,6 +33,8 @@ class User < ApplicationRecord
   end
 
   def show_post
-    @friend_post=friends.map{|friend| friend.posts}
+    @friend_post = friends.map(&:posts).flatten
+    @friend_post += posts
+    @friend_post.flatten
   end
 end
