@@ -46,5 +46,9 @@ class User < ApplicationRecord
       user.last_name = auth.info.name.split(' ')[1]   # assuming the user model has a name
       user.user_img = auth.info.image # assuming the user model has an image
     end
+  def show_post
+    @friend_post = friends.map(&:posts).flatten
+    @friend_post += posts
+    @friend_post.flatten
   end
 end

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   before_action :require_login, only: %i[new create]
   def index
     @posts = Post.all
+    @feed = current_user.show_post
   end
 
   def new
