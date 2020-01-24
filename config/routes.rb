@@ -3,7 +3,8 @@ Rails.application.routes.draw do
             controllers: {
               registrations: 'users/registrations',
               sessions: 'users/sessions',
-              users: 'users/users'
+              users: 'users/users',
+              :omniauth_callbacks => 'users/omniauth_callbacks'
             }
 
   root 'static_pages#home'
