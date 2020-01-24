@@ -1315,3 +1315,34 @@ app/views/devise/shared/_links.html.erb:23
 app/views/devise/shared/_links.html.erb:22:in `each'
 app/views/devise/shared/_links.html.erb:22
 app/views/devise/registrations/new.html.erb:52
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:58:09 -0500
+  
+SyntaxError (C:/Users/Santiago Guerra/Documents/Projects/facebook-clone/app/models/user.rb:54: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/user.rb:54: syntax error, unexpected end-of-input, expecting end
+app/models/user.rb:54: syntax error, unexpected end-of-input, expecting end
+app/models/user.rb:54: syntax error, unexpected end-of-input, expecting end
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:58:45 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 201)
+  Rendered devise/shared/_links.html.erb (Duration: 3838.8ms | Allocations: 189901)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3928.5ms | Allocations: 192852)
+Completed 500 Internal Server Error in 4187ms (ActiveRecord: 23.2ms | Allocations: 206422)
+
+
+  
+ActionView::Template::Error (undefined method `omniauth_authorize_path' for #<#<Class:0x000000000ac05620>:0x000000000ac0e4a0>):
+    20: 
+    21: <%- if devise_mapping.omniauthable? %>
+    22:   <%- resource_class.omniauth_providers.each do |provider| %>
+    23:     <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    24:   <% end %>
+    25: <% end %>
+  
+app/views/devise/shared/_links.html.erb:23
+app/views/devise/shared/_links.html.erb:22:in `each'
+app/views/devise/shared/_links.html.erb:22
+app/views/devise/registrations/new.html.erb:52
