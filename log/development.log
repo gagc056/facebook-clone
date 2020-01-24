@@ -31304,3 +31304,1321 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:15:09 -0300
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.8ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 27.6ms | Allocations: 505)
+Completed 200 OK in 412ms (Views: 372.0ms | ActiveRecord: 0.0ms | Allocations: 15596)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:15:13 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 8.7ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 33.2ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 198.7ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 281ms (Views: 248.2ms | ActiveRecord: 10.8ms | Allocations: 29065)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:15:15 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:15:16 -0300
+Started GET "/auth/facebook/callback?code=AQAmKbblW4vX2udhgzlMnAWfcfd6f2ySxXjgtTxPYLHbxkRpcePb0DOj9Bd9gkAt1hiaHbKictV3E6EehcpesTQIlyGVIC8GVrNp-1QxZgFJXHri3NyLFV7yqOB8p5cvKdDqAFm0uMgCBzbWFWAg9yULPu0rug6lPImUVLBr5ZiD6kK7HdiCr-Gvuna39qmYD4TChuxNRp1UdnMQBe8ItBP736Wfr-X8RAMyNqc7gOhgPNU-zJ_IVW57B_OnPEYLpo6khULzaFn02KModvucJSENrJN5ja9Znp73iweJgNRwB7FpybS_JAAk06NwhFsBu8c4FGO0POAw0R60cBG899Go&state=6a2d6ca2ee6c512eb3a53caff875adfb454e13ec071d3145" for ::1 at 2020-01-24 15:15:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:15:17 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 108)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 7892)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:15:18 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:15:18 -0300
+Started GET "/auth/facebook/callback?code=AQAP8RSRcn21JK6GrJQGLLnipuEz5_z4GhO4FyUdVCmOD6VDfcMa02H0e7DMEeFgoDsuTErtYwyl16LuKuG9TJyvGuUTRrNOPlNOQWX2Pcd2C1VId4G_snL55-W_x4SuC1wUlxoRmFER-dQF9iccUwqiY0s6s-PilpgwUaQXhX1T47rw_rJrwW8Q7hbkki0pXAKyIX9FDuvPAt-kquNYb116oOZYQwViXR0Cob76Qci0uWKDoXagrtxAJ93GD0wCzS8pOIrqykdjxNde54ou-LhS1Yg3AzRohUG-BA-U2wEOykMkXOwaUuVxQtfE7gzC1EG7Xu_MQMRls0NHnr5MXc81&state=e92857d86002d98b182a815706c5a4c0f8af887b6c5addef" for ::1 at 2020-01-24 15:15:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/facebook/callback?code=AQAP8RSRcn21JK6GrJQGLLnipuEz5_z4GhO4FyUdVCmOD6VDfcMa02H0e7DMEeFgoDsuTErtYwyl16LuKuG9TJyvGuUTRrNOPlNOQWX2Pcd2C1VId4G_snL55-W_x4SuC1wUlxoRmFER-dQF9iccUwqiY0s6s-PilpgwUaQXhX1T47rw_rJrwW8Q7hbkki0pXAKyIX9FDuvPAt-kquNYb116oOZYQwViXR0Cob76Qci0uWKDoXagrtxAJ93GD0wCzS8pOIrqykdjxNde54ou-LhS1Yg3AzRohUG-BA-U2wEOykMkXOwaUuVxQtfE7gzC1EG7Xu_MQMRls0NHnr5MXc81&state=e92857d86002d98b182a815706c5a4c0f8af887b6c5addef" for ::1 at 2020-01-24 15:17:20 -0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:17:26 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:17:26 -0300
+Started GET "/auth/facebook/callback?code=AQBt5ZBRxvibW1ySI1qQMtyg2gq5LbPEJmYetqvVAVDw6MS7wGhkDy7IP9oMeS2RIiDaDCJzMGUtGuiNSipaUJRM4R6nucdh9MtuPPOjmkwvlNDuoLSHoc1LCM9uohxmZH3MMk1Tz75nOS2zu60WxYMQUThYwDfrKd12XTB9AkhiFcnSHaXKFlltzCP0ekhZKlKpYvazQM4yFRH9ma0SCqU2ufXEOC7kH8mI8Xny41OyvhK0Nj6ydIaGuBSfOGeOQkMtW4i4qN6oD87GqDs2_TKTkmTW1pV85Kp7sRT-LUGkg6mwrkkz_LB6kVrvErnHv86D2BK6h6g0UxnIX83WKyng&state=6939047a275982a27d1e7d874696467f03df8c7a18d11087" for ::1 at 2020-01-24 15:17:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:19:53 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:19:53 -0300
+Started GET "/auth/facebook/callback?code=AQAaNXRZH7Um3gBtAG7_mhxVvyT1wNL_CNRNbdmW67_SabmnJzrkSFPNtORYZUzuhvEcdFNV6dIDOg9R6tdFAtUsENNyaNbir-sj2TFDYfktmznDKqvZbl4iT9T-LgWtNWp9dkArmoZAVoppDZBQQ3bfGOFYtPzE6V5bwpS9yj45y3HvY0xXbpI2KK_s6G7SYC38H0AOq2KB4LemU5bxTxLA6EeLiQ87n1Z6LQ6W5c45Ctvfl45QJen2cMoeZKXVrq30UYF0ai00XMJZgELETh06C_Wfs4ZS0GCTPeJ9RNMrqTff4wVFblZA4MBaAK3HEWn2Wlcwcb89PS49T7VZYffb&state=672b6b4098edea889c89634e504f449dea90b8ae046088e9" for ::1 at 2020-01-24 15:19:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:22:35 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 505)
+Completed 200 OK in 149ms (Views: 134.5ms | ActiveRecord: 0.0ms | Allocations: 15725)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:22:37 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 49.4ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 112ms (Views: 96.0ms | ActiveRecord: 5.6ms | Allocations: 29093)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:22:39 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:22:39 -0300
+Started GET "/auth/facebook/callback?code=AQCZkMi3DwreXGrHRxIp_FSShHsh-nD9ovHEYBt4R9Ppu8FZPiv7Ba41bV7reZ5wKtr0OxDJxgIP8PQ5fJWco2iEdyipFjZR62-yTtQLZI8fD_u4NoJNsb0YiiaojkuBIFqoqfs6H3S4ymKkMLp9P4WIIjIDk2zf0Xbn88ex8sFUAcT2CK90RbxTwgXOMTdOaZtsnDbboJGOPdSHaolJBK9hLDv-zpP3hvavwCK30C3-d4LI6anygI6gWnYAg_F_R5I8gyDsaHObpFkg3M0CkG8G4zz9_CKsrZxUTHR25MJHuC_Zyv7rz1PTqK0MTOo27uX_-LH0-lGu64Nqxh2abkkq&state=f2dc9dbd87238e7f975ec7e5d865916d16d4328da3afdaa9" for ::1 at 2020-01-24 15:22:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:25:10 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 159ms (Views: 144.8ms | ActiveRecord: 0.0ms | Allocations: 15713)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:25:12 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 50.1ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 123ms (Views: 103.3ms | ActiveRecord: 7.3ms | Allocations: 29097)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:25:13 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:25:14 -0300
+Started GET "/auth/facebook/callback?code=AQD1uMFKCDxRAc4W267zIjS7-8-tRLk6CZL6k5c2FT7KJrC_BSaoQPpoMVL3KXFc3ALVbWKTUba86I7hfZe5Fnxbxg1czKCTYZsye_pvsQDH5BcH6rSlidc5iYyMXs86wizojTV1fMKTKSvnYhaAn5ZIvge-fwt_XjcEYhNdQsyRD4pHio93aUSoTPdWVyPyPkpA1Qsk1bjfNis4ZmAq2UuXZgmP-8Dw_wHmlZDF8B7rH9w2fEqAsVM3lGBjdKUJcr4fhGF8IlwBnej8FyEUuBqp3uwTYc6VAejOH7DCLDDZBF_701OXb9nkdgEeXuhtSNHwjrIuX1D7ocutjqp8w-G9&state=e2ae1c96cb125a43897aa88497c00e23e96aea0566c34774" for ::1 at 2020-01-24 15:25:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:26:12 -0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 120ms (Views: 104.8ms | ActiveRecord: 0.0ms | Allocations: 15697)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:26:15 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 45.1ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 112ms (Views: 95.6ms | ActiveRecord: 5.7ms | Allocations: 29101)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:26:17 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:26:17 -0300
+Started GET "/auth/facebook/callback?code=AQBDn85rJMToY9KH24Y7qF-hW57M2X26rz-X5t9kdV8DAP4pZuTXo4xeQhyi1LpUgGbFEdV5s6fev1zGn68j5tbMnxAUUXDe7H0E70dFA3zwk7milvrkZvrJnFdS9UkgalxjWPGnGVCoxQMEPGD8LlBkKyjzgD0eBxpnCdwmIpIbAMAShAvovznOqmLDLCfYCMbheQIdFcgfjDSkK16DcAgCJwYlSVhx6D81JUzpOvn2GyV21_gc_Ii3CnvzJvqaVj96tMcoGvP4FQRf790YJ8Rc8c7qDITB6QOqqsiwQ_HXpfpFHVdGviCkRVoFDT2PUisM5cyX-sjN9PGo_T_FZggB&state=fffe7f8af2ee1158cf074dc50b9f50ae18fb0dca3ed29482" for ::1 at 2020-01-24 15:26:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:27:31 -0300
+  
+ArgumentError (You should not use the `match` method in your router without specifying an HTTP method.
+If you want to expose your action to both GET and POST, add `via: [:get, :post]` option.
+If you want to expose your action to GET, use `get` in the router:
+  Instead of: match "controller#action"
+  Do: get "controller#action"):
+  
+config/routes.rb:24:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/routes" for ::1 at 2020-01-24 15:29:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:31:59 -0300
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 505)
+Completed 200 OK in 143ms (Views: 128.1ms | ActiveRecord: 0.0ms | Allocations: 15711)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:32:02 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 43.6ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 109ms (Views: 91.5ms | ActiveRecord: 5.4ms | Allocations: 29087)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:32:03 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:32:03 -0300
+Started GET "/auth/facebook/callback?code=AQB5wcatWjpKvJaQnLKUk-bL3K4Ta63imAR7USgM8DPEGU0SVa8ZQYci9R4BIl9Es7PDQCEvIeRiUpruLcRBw5WiiKUUSC2Oqil3thqMRvxoJ2wC0N5VdX1nuTNJnpu1xqqtX7lzXcxIYPdID-fEjpk9UACxqLAe2U1Q3MxaAeJ6DewENu10H5zakV6rWBS3wFb7fqz_cLyN4cHqaiKPW9oAIzeVVl3RBpsDglvpyV5oLUqb0PbP5XWCY6FJMWNL0wIup1xP3ryabWAmFPXez0vSnQdMoxTdCAUJKJLhp_28bgt3f5ByFlCXETCQEgvk6dy182HfjJ4-YxCLw9eAgNdm&state=3ddee0b1f1980afa3300b2026c156b2ef3c9163ea1c5dfd5" for ::1 at 2020-01-24 15:32:03 -0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQB5wcatWjpKvJaQnLKUk-bL3K4Ta63imAR7USgM8DPEGU0SVa8ZQYci9R4BIl9Es7PDQCEvIeRiUpruLcRBw5WiiKUUSC2Oqil3thqMRvxoJ2wC0N5VdX1nuTNJnpu1xqqtX7lzXcxIYPdID-fEjpk9UACxqLAe2U1Q3MxaAeJ6DewENu10H5zakV6rWBS3wFb7fqz_cLyN4cHqaiKPW9oAIzeVVl3RBpsDglvpyV5oLUqb0PbP5XWCY6FJMWNL0wIup1xP3ryabWAmFPXez0vSnQdMoxTdCAUJKJLhp_28bgt3f5ByFlCXETCQEgvk6dy182HfjJ4-YxCLw9eAgNdm", "state"=>"3ddee0b1f1980afa3300b2026c156b2ef3c9163ea1c5dfd5", "provider"=>"facebook"}
+[Devise] Could not find devise mapping for path "/auth/facebook/callback?code=AQB5wcatWjpKvJaQnLKUk-bL3K4Ta63imAR7USgM8DPEGU0SVa8ZQYci9R4BIl9Es7PDQCEvIeRiUpruLcRBw5WiiKUUSC2Oqil3thqMRvxoJ2wC0N5VdX1nuTNJnpu1xqqtX7lzXcxIYPdID-fEjpk9UACxqLAe2U1Q3MxaAeJ6DewENu10H5zakV6rWBS3wFb7fqz_cLyN4cHqaiKPW9oAIzeVVl3RBpsDglvpyV5oLUqb0PbP5XWCY6FJMWNL0wIup1xP3ryabWAmFPXez0vSnQdMoxTdCAUJKJLhp_28bgt3f5ByFlCXETCQEgvk6dy182HfjJ4-YxCLw9eAgNdm&state=3ddee0b1f1980afa3300b2026c156b2ef3c9163ea1c5dfd5".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 9ms (ActiveRecord: 0.0ms | Allocations: 468)
+
+
+  
+AbstractController::ActionNotFound (Could not find devise mapping for path "/auth/facebook/callback?code=AQB5wcatWjpKvJaQnLKUk-bL3K4Ta63imAR7USgM8DPEGU0SVa8ZQYci9R4BIl9Es7PDQCEvIeRiUpruLcRBw5WiiKUUSC2Oqil3thqMRvxoJ2wC0N5VdX1nuTNJnpu1xqqtX7lzXcxIYPdID-fEjpk9UACxqLAe2U1Q3MxaAeJ6DewENu10H5zakV6rWBS3wFb7fqz_cLyN4cHqaiKPW9oAIzeVVl3RBpsDglvpyV5oLUqb0PbP5XWCY6FJMWNL0wIup1xP3ryabWAmFPXez0vSnQdMoxTdCAUJKJLhp_28bgt3f5ByFlCXETCQEgvk6dy182HfjJ4-YxCLw9eAgNdm&state=3ddee0b1f1980afa3300b2026c156b2ef3c9163ea1c5dfd5".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+):
+  
+devise (4.7.1) app/controllers/devise_controller.rb:90:in `unknown_action!'
+devise (4.7.1) app/controllers/devise_controller.rb:65:in `assert_is_devise_resource!'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.1) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.1) lib/rack/etag.rb:27:in `call'
+rack (2.1.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.1) lib/rack/head.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.1) lib/rack/session/abstract/id.rb:277:in `context'
+rack (2.1.1) lib/rack/session/abstract/id.rb:271:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:32:38 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 106ms (Views: 91.5ms | ActiveRecord: 0.0ms | Allocations: 15709)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:32:40 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 45.1ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 110ms (Views: 92.9ms | ActiveRecord: 4.8ms | Allocations: 29103)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:32:41 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:32:42 -0300
+Started GET "/auth/facebook/callback?code=AQCb2-R9_2DXlb-JlCxmRvjCGboeieE74krm6g43dvY5dY1Nw_epJfQhxqYdtKltIxrBE3t48SsubGIiDvWUWJsCinw5An1FXEvXBiajSveqE83TddmkEZHiHG0VYnmZgQRl7yC6c1ZZEv4b1C4XJpgRIUYT7pv3nxUASXntj99vEcqAjS7IN_uKreX_RZ_fFUf2DvH8Cb3Kkr5ii1sg-GLadr8kV31OMTOOePwcMsW7lka28zngn9Qx3nXTKQyRaapZvmQq-nEzBFSLdnkHKMIa_ucy0llF63CNwZfUN8Bylc1SpiML0nv3-_ArH4Tk9bd_wuMQjP4Ex3khyptzd6Ak&state=965796eb03daa167b7b0f3c7385efeaf26f42e0c44287e40" for ::1 at 2020-01-24 15:32:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:34:25 -0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 110ms (Views: 95.1ms | ActiveRecord: 0.0ms | Allocations: 15713)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-24 15:34:27 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 724)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 60.6ms | Allocations: 8292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 128ms (Views: 108.9ms | ActiveRecord: 6.7ms | Allocations: 27545)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:34:32 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:34:32 -0300
+Started GET "/auth/facebook/callback?code=AQA2Rz6_ZL9gUuuwoK7dW8IHpVcEESLPpraystGu5BWxO5CSRfNvQmzy7JLV30cChwE0jFw9HV0K6UB9PQBTbCmq-nmP1pw6w8j-5jm9wLmpcLXsbZFvBS9k_RhiWGNR2ZMpB6CF96HmXoFaT-00_UXhhx9iU_pKZt0bjnlmz37wUAwcfGl5y0-cjVR7WxsnLprbnFRG3mF2laSu3ES55yXO4JHDviSqiD4k4Wd-otgLL4YrFX3xR9D3SqAFr7tfOh60Yd2tTYANKHdnabTiH0668UfCHT9GXra8_MtM_ISdOu9s7Un1zSbyeOoNYXlZrhDrQqO8MXQFzu68UMoWZ6mp&state=5dafee077a42360ee7ce2d15bd254d6a7656ee9d1bbd8915" for ::1 at 2020-01-24 15:34:33 -0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQA2Rz6_ZL9gUuuwoK7dW8IHpVcEESLPpraystGu5BWxO5CSRfNvQmzy7JLV30cChwE0jFw9HV0K6UB9PQBTbCmq-nmP1pw6w8j-5jm9wLmpcLXsbZFvBS9k_RhiWGNR2ZMpB6CF96HmXoFaT-00_UXhhx9iU_pKZt0bjnlmz37wUAwcfGl5y0-cjVR7WxsnLprbnFRG3mF2laSu3ES55yXO4JHDviSqiD4k4Wd-otgLL4YrFX3xR9D3SqAFr7tfOh60Yd2tTYANKHdnabTiH0668UfCHT9GXra8_MtM_ISdOu9s7Un1zSbyeOoNYXlZrhDrQqO8MXQFzu68UMoWZ6mp", "state"=>"5dafee077a42360ee7ce2d15bd254d6a7656ee9d1bbd8915", "provider"=>"facebook"}
+[Devise] Could not find devise mapping for path "/auth/facebook/callback?code=AQA2Rz6_ZL9gUuuwoK7dW8IHpVcEESLPpraystGu5BWxO5CSRfNvQmzy7JLV30cChwE0jFw9HV0K6UB9PQBTbCmq-nmP1pw6w8j-5jm9wLmpcLXsbZFvBS9k_RhiWGNR2ZMpB6CF96HmXoFaT-00_UXhhx9iU_pKZt0bjnlmz37wUAwcfGl5y0-cjVR7WxsnLprbnFRG3mF2laSu3ES55yXO4JHDviSqiD4k4Wd-otgLL4YrFX3xR9D3SqAFr7tfOh60Yd2tTYANKHdnabTiH0668UfCHT9GXra8_MtM_ISdOu9s7Un1zSbyeOoNYXlZrhDrQqO8MXQFzu68UMoWZ6mp&state=5dafee077a42360ee7ce2d15bd254d6a7656ee9d1bbd8915".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 9ms (ActiveRecord: 0.0ms | Allocations: 468)
+
+
+  
+AbstractController::ActionNotFound (Could not find devise mapping for path "/auth/facebook/callback?code=AQA2Rz6_ZL9gUuuwoK7dW8IHpVcEESLPpraystGu5BWxO5CSRfNvQmzy7JLV30cChwE0jFw9HV0K6UB9PQBTbCmq-nmP1pw6w8j-5jm9wLmpcLXsbZFvBS9k_RhiWGNR2ZMpB6CF96HmXoFaT-00_UXhhx9iU_pKZt0bjnlmz37wUAwcfGl5y0-cjVR7WxsnLprbnFRG3mF2laSu3ES55yXO4JHDviSqiD4k4Wd-otgLL4YrFX3xR9D3SqAFr7tfOh60Yd2tTYANKHdnabTiH0668UfCHT9GXra8_MtM_ISdOu9s7Un1zSbyeOoNYXlZrhDrQqO8MXQFzu68UMoWZ6mp&state=5dafee077a42360ee7ce2d15bd254d6a7656ee9d1bbd8915".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+):
+  
+devise (4.7.1) app/controllers/devise_controller.rb:90:in `unknown_action!'
+devise (4.7.1) app/controllers/devise_controller.rb:65:in `assert_is_devise_resource!'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.1) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.1) lib/rack/etag.rb:27:in `call'
+rack (2.1.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.1) lib/rack/head.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.1) lib/rack/session/abstract/id.rb:277:in `context'
+rack (2.1.1) lib/rack/session/abstract/id.rb:271:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 15:35:12 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 505)
+Completed 200 OK in 109ms (Views: 94.4ms | ActiveRecord: 0.0ms | Allocations: 15707)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 15:35:15 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 41.4ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 104ms (Views: 87.4ms | ActiveRecord: 5.0ms | Allocations: 29079)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:35:16 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 15:35:17 -0300
+Started GET "/auth/facebook/callback?code=AQDyV86_lDsz9ObUXNM-LdAffGE69hpScNqngNWvp63CbtMjVVa-i0C2dihlnZsOfyw83hQHpV7ofu-IcUE_7L4odCbwZnANbfIl6nqMuLbsje6SkCDppKQew64j7Z0iME8xelWiaqFthBkDbcD_Uz80bI3zFKPkEpi6OmOMdpl8tenfSMLxrgpphG_F2zd-0UsiqjZS2dk3v4vsWJ_ztxq065rcwzdNNdjAI2OOrPHRDlV-Meqpx5YdunU98Y9A3BB-HHSISVNL1DYnHbwxe6dcCLZytLpM1vdu3-kJ_ZTzdq47cMq-WMzMJ4n_WNgB7hYcn93zzmCyCSNJT3Ie02v7&state=1e78f2fba149e81fb2de55d9a8cc5fa25b25dd8bf60fa880" for ::1 at 2020-01-24 15:35:17 -0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDyV86_lDsz9ObUXNM-LdAffGE69hpScNqngNWvp63CbtMjVVa-i0C2dihlnZsOfyw83hQHpV7ofu-IcUE_7L4odCbwZnANbfIl6nqMuLbsje6SkCDppKQew64j7Z0iME8xelWiaqFthBkDbcD_Uz80bI3zFKPkEpi6OmOMdpl8tenfSMLxrgpphG_F2zd-0UsiqjZS2dk3v4vsWJ_ztxq065rcwzdNNdjAI2OOrPHRDlV-Meqpx5YdunU98Y9A3BB-HHSISVNL1DYnHbwxe6dcCLZytLpM1vdu3-kJ_ZTzdq47cMq-WMzMJ4n_WNgB7hYcn93zzmCyCSNJT3Ie02v7", "state"=>"1e78f2fba149e81fb2de55d9a8cc5fa25b25dd8bf60fa880", "provider"=>"facebook"}
+[Devise] Could not find devise mapping for path "/auth/facebook/callback?code=AQDyV86_lDsz9ObUXNM-LdAffGE69hpScNqngNWvp63CbtMjVVa-i0C2dihlnZsOfyw83hQHpV7ofu-IcUE_7L4odCbwZnANbfIl6nqMuLbsje6SkCDppKQew64j7Z0iME8xelWiaqFthBkDbcD_Uz80bI3zFKPkEpi6OmOMdpl8tenfSMLxrgpphG_F2zd-0UsiqjZS2dk3v4vsWJ_ztxq065rcwzdNNdjAI2OOrPHRDlV-Meqpx5YdunU98Y9A3BB-HHSISVNL1DYnHbwxe6dcCLZytLpM1vdu3-kJ_ZTzdq47cMq-WMzMJ4n_WNgB7hYcn93zzmCyCSNJT3Ie02v7&state=1e78f2fba149e81fb2de55d9a8cc5fa25b25dd8bf60fa880".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+
+Completed 404 Not Found in 9ms (ActiveRecord: 0.0ms | Allocations: 468)
+
+
+  
+AbstractController::ActionNotFound (Could not find devise mapping for path "/auth/facebook/callback?code=AQDyV86_lDsz9ObUXNM-LdAffGE69hpScNqngNWvp63CbtMjVVa-i0C2dihlnZsOfyw83hQHpV7ofu-IcUE_7L4odCbwZnANbfIl6nqMuLbsje6SkCDppKQew64j7Z0iME8xelWiaqFthBkDbcD_Uz80bI3zFKPkEpi6OmOMdpl8tenfSMLxrgpphG_F2zd-0UsiqjZS2dk3v4vsWJ_ztxq065rcwzdNNdjAI2OOrPHRDlV-Meqpx5YdunU98Y9A3BB-HHSISVNL1DYnHbwxe6dcCLZytLpM1vdu3-kJ_ZTzdq47cMq-WMzMJ4n_WNgB7hYcn93zzmCyCSNJT3Ie02v7&state=1e78f2fba149e81fb2de55d9a8cc5fa25b25dd8bf60fa880".
+This may happen for two reasons:
+
+1) You forgot to wrap your route inside the scope block. For example:
+
+  devise_scope :user do
+    get "/some/route" => "some_devise_controller"
+  end
+
+2) You are testing a Devise controller bypassing the router.
+   If so, you can explicitly tell Devise which mapping to use:
+
+   @request.env["devise.mapping"] = Devise.mappings[:user]
+
+):
+  
+devise (4.7.1) app/controllers/devise_controller.rb:90:in `unknown_action!'
+devise (4.7.1) app/controllers/devise_controller.rb:65:in `assert_is_devise_resource!'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.1) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.1) lib/rack/etag.rb:27:in `call'
+rack (2.1.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.1) lib/rack/head.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.1) lib/rack/session/abstract/id.rb:277:in `context'
+rack (2.1.1) lib/rack/session/abstract/id.rb:271:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 16:54:55 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 107ms (Views: 94.0ms | ActiveRecord: 0.0ms | Allocations: 15719)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 16:54:57 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 41.6ms | Allocations: 9928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 104ms (Views: 86.6ms | ActiveRecord: 5.7ms | Allocations: 29099)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:54:59 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:54:59 -0300
+Started GET "/auth/facebook/callback?code=AQA5rBqCpDMNnYSzfe3_-wjhWsTCiCen7hLEqFzUy3N5-_ZtIEzPhPmGrxGqthvnKQ27ZXzW8ajCGFFCtDB5jfx2BoJKARSiSKCV3D7ZBykdsb6QyxThHeSjHxXylOvQfvshmwTrSHGGcSFiAMuO8TbJwbYg2aQOwwgaO7NO_C2W7h6ZuVoQty3qXS-i9w_1jjN-4i4M2dl1DSVeDSYg80Sf_SfcBtkRGvyZNPaiByqtueMVuE0o1qkCdQgR26eclKmUIghEdgWsyGpHE3SK6gLIEEKA9jHdkWQnA6PZ4VlOSv_bN__8mm4ig2TQaC4jAwZFmNqjZH6u-5UM_vbdbSAb&state=7055313981c1406ee7a4300ed7025a59df8d704120935ae6" for ::1 at 2020-01-24 16:55:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:55:05 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:55:06 -0300
+Started GET "/auth/facebook/callback?code=AQBudDe9Xx6bb4pzdSpfy25qSHfF5Ys_XScSa7RbZpnlslxqGClyRSRkJevOzzFeyXlzzr6lXNpworTYjIbCGRwJvmNebfMZSpZeTDrIKLLkltpvm15_G5Xt-jpFstPZyxjVB5BItlgd9DJusjceN1ucGzQZQ6V4eeQ_aKy7dpTW-dVMiH5GjFO1qW8VsEDJgUtcS_rCXwn-32MVGdEjfqEjYotjrkrYUA_vCcyci13wHwg9fWlGPf9zA5qG_3-c6_eT7b_9HYnVhrkjPC6fmt8mG5Iar7GZ0j0023um72Ik-wEnB-Ztv9Fi20WouDB-DZg5m5fZ4xPYlTIBpfyepRxy&state=e496b28714c7a9aa6ea1fe679f1a93a7b734150efcfc3605" for ::1 at 2020-01-24 16:55:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 16:59:46 -0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 103ms (Views: 89.0ms | ActiveRecord: 0.0ms | Allocations: 15699)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-24 16:59:48 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 724)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.1ms | Allocations: 8290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 98ms (Views: 82.1ms | ActiveRecord: 5.0ms | Allocations: 27550)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:59:50 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:59:50 -0300
+Started GET "/auth/facebook/callback?code=AQB4wjtEm3itlrnD5O10UhGILalBzALL78qDh0P8WLgIjD4X4GRVdCmdiMSEN3onx2nfjMK0Ag566a317w-sG4eJDlNzdV1pXzoUKXFLzyHh4tbQSzQ54OFcBZ40gpuz9gRynfpwJeJdOLTxjqsCvdKqBwI8T0Cgcn8QI18dOqme98VxOKzShALA0drVsXokvGtzKipaWJV04dDhkXEC7O3VJfnnX3_7VZ6pBp5VrafG8UWOc07KD0nseIXPoAjMTnjQaT1fO74KCyZC_3_vP_67KkLlarxfReWDAeelYlbzUI-ylzztVsZpvvaWAJJZbawtUoIDKZrMkK2dff1iM-Zo&state=c97f7690b12adee2e80d3e9eb3763d51a5dab9402813610e" for ::1 at 2020-01-24 16:59:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:59:54 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 16:59:54 -0300
+Started GET "/auth/facebook/callback?code=AQALQYFGO_yiaanVBaneZ1iHSkqSZq4GWFXzYG7hHA7PzXl631Yh5bJ8g5pQ_j0KE0zqOIlY2xdfs0y5XZJpp2rp57GJIWnCgQFXJSTXSyouXODUrIgrR5IpOpbb7B59g4dXspCpJIXYfYRhhv1GzPrvSjWALkHOZ39CY6AJqrZENJFa_6N_dQ8LG__I8CUvTH1y9WoRZ8gIgu_41d1Cew6xCk8Cc8JG_SXiMX8Wl_HNca_zmQvZUubw0SdDBL_DediTiKk6YapnaiIqrTaNV6csfFZCD1m4rlVRvtY90EFvpbjQc2q-3ruKilhlMzIYibwY1sdwbJQuthg4jSi8dM62&state=4e491be601a64e35fc34f3ba623f241bea01597cee604af2" for ::1 at 2020-01-24 16:59:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 17:17:03 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 505)
+Completed 200 OK in 106ms (Views: 93.1ms | ActiveRecord: 0.0ms | Allocations: 15715)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 17:17:06 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 633)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.2ms | Allocations: 9926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 100ms (Views: 85.2ms | ActiveRecord: 4.7ms | Allocations: 29099)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:17:07 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:17:08 -0300
+Started GET "/auth/facebook/callback?code=AQDJjE4yqz7gBUNC8M5RhtHnUJfdWRTonc4xmj4ZC2Cyto2Ab8t-v3Sa7KJoczZfgNRZB2Di00ZP2L6O0mA8CNQEObRmCJmoklQOuwxdFPzre1vCSio_X4mXg3rWgZOn04Pm1ZA9IRO1Q3vQUsbDn2q2c4ZIY710alPZIXLTiNnbMdOg-RZVQij3JtKPAWHE9cgfZjllvFjYKtIppqHPkC72Y1m2TaLMMj7gsSXoQYL2sNKoPb2sipNCBvaeAyTCNy0xCralZoNnBOz0bm8uPqyVn_fwRVNu7ypaROZlBJnQz-8H_sNVEGamk7Pmb_5wy1zPSbnnNk6b9scqYmKZOY4o&state=ba700315cbe25ee23ddad406b018c6ea96b367482712c503" for ::1 at 2020-01-24 17:17:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:17:12 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:17:12 -0300
+Started GET "/auth/facebook/callback?code=AQCw7jlJ5OoWkZJahFE31_tBDg4CtdbvVr7kTyTEmSE0YucqqhNUm53ukOh_Km1hYmM2MzVA1g8DFOAdB8sPW7jSrwa7v6R_srpBnQt4jP19aC4Fe2XovFlMLOcEs-_UeNHnhUnTpx3dZeIdK4z6RkgUgwlL3804ILKq5JIq7OxDvJn6Z5ltfSwHD_gNvWKdAiVn4pUBBdp-ffyYoIw6oloxgKpuJLLbGiPriATM10RPgH2evdSqXnapu8UVs-Iy4rY2O5aVygkGRfoVpp9KoUykPQVvw02DpQyeZEG9jITMjFSHCXbCF0kj-g2FR7nYl7x0XMoidu5w8xaEaLtiIX6O&state=510827de38131b462c4633f0d28b65a7895b9a134951480c" for ::1 at 2020-01-24 17:17:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:18:59 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:18:59 -0300
+Started GET "/auth/facebook/callback?code=AQC0jR-cv0CmTu5BMIc4Tbb41UhkVlc9jsUsVyq6t5hnMmt5BhHn4oDhnMmZJuEFDt_VMRdnbRMQ286IQnhQ-m5O-EaxZrKEbmE0J3gQBa6twf8u5FSsHmy-eqrG8bVOWKLvID5pVy2l1NLY2Ftp06O6H_9whKfc3Z4rpPcE1KQxwRW0dw_LmokjytjGlcFHolUybDMofd2zL99gRM4m6aA6cIsWvuaW_M8J3q2jEz_NMKQciAWviv5NJ-eMbu604h2qvrzhuITjjlNRLIRDViC7bPAKnW6N0ihkeoxViSIV146FoMir9HrHIdi5Vhu4R-7EW19jt6221tIwjBHXIGm7&state=3c7a643e1e5032ccccd3afc41e146e038dd69bdf0c80ca0a" for ::1 at 2020-01-24 17:19:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:19:03 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:19:03 -0300
+Started GET "/auth/facebook/callback?code=AQC78WW7KDUdR64sV9fj65w6jqveOgwiAow4acrKtUYovnNAxRHl2NJwhbUPtILh1TCPzk6tXWALIuUjM6Chgn6Hcdqe7gi_JkgfN-r2GKZmwS67WYe7h8g7HO0F__sduTlsNQrnzmSo5JYHkWNN_kbI4MHR-eV4Nl44O39ThXqH6Pd_mlc1AWSMElt84W3YWmlQVqitZ6q325-3GdaNl_nbQpGTtdygMg73q4E5J7wGEf84Ixh8tqieX8Gn1jXmzu5p-9i_SE4ppmlF-9FrQm0N-dPEuIATbDHO7i_jsP3HGVubtL0Dl0mT0_6HzixWakMYYB26LB8l-rGHn6Ec0YBK&state=574af7f0dcf7670e93e53f4e304eda1a26d7ed57e88842b8" for ::1 at 2020-01-24 17:19:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-24 17:21:54 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 505)
+Completed 200 OK in 142ms (Views: 128.6ms | ActiveRecord: 0.0ms | Allocations: 15707)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-24 17:21:57 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 724)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.2ms | Allocations: 8292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 97ms (Views: 81.6ms | ActiveRecord: 5.2ms | Allocations: 27527)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-24 17:21:58 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 107)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms | Allocations: 10868)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:22:00 -0300
+Started GET "/users/auth/facebook" for ::1 at 2020-01-24 17:22:00 -0300
+Started GET "/auth/facebook/callback?code=AQDBb9gcS9g-FxtVOmaAsU0AApdxXLj8QIW0xjluJpLhyaiIkJkgNK38EiUL5FDIfN5V_uxCE-rxoKgCoOzVH-jjtQ5DmDdI8voGoer6Hen2dVZ0rn51fLQu-ZIMwmht0hGh7Kg8GvjxhStX1KofA1NKAa8VWwz-4v9cJkX0BdRvVN9Ly65NrYmsABXDJPL9EqJ1I7wkGJkpAu2El9bArbXKALW1JZq6Ml2baDHsOT6sMEpRnCliqTvO61pkieQ67LO08JKU7FYhUKERHlZU3LJ2-hQ0XhMrydQB4HovBgLv6sK6VG5J9tl4GsYA4nkoGrWIrWBtqkywuJcC8fYtrED0&state=d107d99d40f77ff38c2b6badac537ee52159656ac7387c53" for ::1 at 2020-01-24 17:22:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook/callback"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
