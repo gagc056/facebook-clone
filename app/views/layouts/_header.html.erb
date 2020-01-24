@@ -5,11 +5,11 @@
 
     <%= link_to('Feed', posts_path)%> | 
 
-    <%= link_to('Friends', '#') %> | 
+    <%= link_to('Friends', friends_path) %> | 
 
     <%= link_to('Search Friends', users_path) %> | 
 
-    <%= link_to('Notifications', '#') %> | 
+    <%= link_to("Notifications #{notification_status}", notifications_path) %> | 
 
     <%= link_to('Post', new_post_path) %> | 
 

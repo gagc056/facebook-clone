@@ -13,6 +13,13 @@ Rails.application.routes.draw do
     resources :likes, only: %i[new create destroy]
   end
   resources :users, only: %i[show index]
+  resources :friendships, except: %i[index]
+
+
+  
+  get '/notifications', to: 'friendships#index'
+  get '/friends', to: 'users#friends'
+  patch "/friendship", to: "friendships#update"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
