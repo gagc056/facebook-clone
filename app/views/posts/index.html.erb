@@ -3,7 +3,7 @@
 
 <section>
 
-  <% @posts.each do |post| %>
+  <% @feed.each do |post| %>
     <article>
       <p>
         <%= link_to("#{ post.content}", post_path(post)) %>

@@ -44,4 +44,8 @@ RSpec.describe Friendship, type: :model do
     user.friendships.build(friend_id: friend.id)
     expect(user.friendships.first.friend).to eq(friend)
   end
+
+  it 'is nil when a friendship is deleted' do
+    expect(friendship.id).to eq(nil)
+  end
 end
