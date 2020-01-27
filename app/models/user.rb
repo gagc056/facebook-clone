@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   has_many :posts
   has_many :comments
@@ -15,8 +15,6 @@ class User < ApplicationRecord
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
-  validates :date_birth, presence: true
-  validates :gender, presence: true, inclusion: { in: %w[male female] }
 
   def friends
     friends = friendships.map { |friendship| friendship.friend if friendship.status }
@@ -30,6 +28,25 @@ class User < ApplicationRecord
 
   def pending_friends
     friendships.map { |friendship| friendship.friend unless friendship.status }.compact
+  end
+
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      data = session['devise.facebook_data']
+      if data && session['devise.facebook_data']['extra']['raw_info']
+        user.email = data['email'] if user.email.blank?
+      end
+    end
+  end
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      user.first_name = auth.info.name.split(' ')[0]
+      user.last_name = auth.info.name.split(' ')[1] # assuming the user model has a name
+      user.user_img = auth.info.image # assuming the user model has an image
+    end
   end
 
   def show_post
