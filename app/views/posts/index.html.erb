@@ -3,10 +3,10 @@
 
 <section>
 
-  <% @posts.each do |post| %>
+  <% @feed.each do |post| %>
     <article>
       <p>
-        <%= post.content %>
+        <%= link_to("#{ post.content}", post_path(post)) %>
       </p>
       <span>
         By: <%= post.user.first_name %>

@@ -1,0 +1,18 @@
+
+<h3>
+  You have <%= pluralize(@friendship_request.count, 'notification') %>
+</h3>
+
+<% @friendship_request.each do |request| %>
+
+    <li>
+      <%= request.first_name %>
+      <%= link_to 'Accept Friend', friendship_path(request), :method=> :put %>
+    </li>
+<% end %>
+
+<% @pending_friends.each do |request| %>
+    <li>
+      You have just sent a friend request to <%= request.first_name %>
+    </li>
+<% end %>

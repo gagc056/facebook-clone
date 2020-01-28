@@ -1,0 +1,18 @@
+
+<h2>
+  Friends
+</h2>
+
+<ul>
+
+  <% @friends.each do |friend| %>
+
+    <li>
+      <%= link_to("#{friend.first_name} #{friend.last_name}", friend) %>
+      | 
+      <%= link_to('Delete Friendship', friendship_path(find_friendship_by_friend(friend)), method: :delete) %>
+    </li>
+
+  <% end %>
+  
+</ul>

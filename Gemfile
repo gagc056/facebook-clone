@@ -34,6 +34,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 
 # Omniauth FB
+gem 'omniauth'
 gem 'omniauth-facebook'
 
 group :development, :test do
