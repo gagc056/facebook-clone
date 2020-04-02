@@ -1,0 +1,22 @@
+@import '../abstracts/variables';
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  background-color: $light-color;
+  margin-bottom: calc(62px + 16px);
+  @media screen and (min-width: 720px) { margin-bottom: 0;}
+}
+
+.bg-pa {
+  background: image-url("bg-min.png");
+  background-size: 700px;
+  background-color: white;
+}

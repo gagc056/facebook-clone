@@ -1,0 +1,11 @@
+@import '../abstracts/variables';
+
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: $dark-color;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
