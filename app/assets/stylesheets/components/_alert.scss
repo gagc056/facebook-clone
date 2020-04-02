@@ -1,0 +1,37 @@
+@import '../abstracts/variables';
+
+.noti {
+  position: absolute;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 16px;
+  left: 16px;
+
+  & > .notice {
+    color: $main-color;
+  }
+
+  & > .alert {
+    color: rgb(255, 139, 139);
+  }
+}
+
+#error_explanation {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.message {
+  &-title {
+    font-size: 18px;
+    color: rgb(255, 162, 162);
+    margin-bottom: 16px;
+  }
+
+  &-list {
+    list-style: none;
+    color: $alt-dark-color;
+  }
+}

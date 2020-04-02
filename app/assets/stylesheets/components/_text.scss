@@ -1,0 +1,51 @@
+@import '../abstracts/variables';
+
+.title {
+  color: $main-color;
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.subtitle {
+  line-height: 18px;
+  font-size: 18px;
+  color: $alt-dark-color;
+  font-weight: 600;
+  margin-bottom: 42px;
+}
+
+.password-text {
+  font-family: monospace;
+}
+
+.txt-center {
+  text-align: center;
+  justify-content: center;
+}
+
+.paragraph {
+  color: $dark-color;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  & > a {
+    color: $main-color;
+  }
+}
+
+.alt-paragraph {
+  color: $alt-dark-color;
+  margin-bottom: 32px;
+  & > a {
+    color: $main-color;
+  }
+}
+
+.content-text {
+  max-width: 500px;
+}
+
+.dark {
+  color: $dark-color;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
