@@ -10,14 +10,26 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <% flash.each do |type, msg| %>
-      <div class="alert alert-info">
-        <%= msg %>
+
+
+   
+      <%= render 'layouts/header' %>
+      <div class="noti">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
       </div>
-    <% end %>
-    <%= yield %>
+      <!-- <% flash.each do |type, msg| %>
+        <div class="alert alert-info">
+          <%= msg %>
+        </div>
+      <% end %> -->
+      <%= yield %>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
   </body>
 </html>

@@ -1,18 +1,21 @@
+<div class="container">
+  <div class="item">
+   
+    <ul class="list">
+    
+      <% @friends.each do |friend| %>
+    
+        <li class="list-item">
+          <%= link_to("#{friend.first_name} #{friend.last_name}", friend, class: 'list-desc') %>
+          <%= link_to(friendship_path(find_friendship_by_friend(friend)), method: :delete, class: 'list-action') do%>
+            <i data-feather="user-minus"></i>
+            <%= 'Delete Friendship' %>
+          <% end %>
+        </li>
+    
+      <% end %>
+      
+    </ul>
+  </div>
+</div>
 
-<h2>
-  Friends
-</h2>
-
-<ul>
-
-  <% @friends.each do |friend| %>
-
-    <li>
-      <%= link_to("#{friend.first_name} #{friend.last_name}", friend) %>
-      | 
-      <%= link_to('Delete Friendship', friendship_path(find_friendship_by_friend(friend)), method: :delete) %>
-    </li>
-
-  <% end %>
-  
-</ul>

@@ -1,49 +1,70 @@
-<article>
-  <p>
-    <%=@post.content %>
-  </p>
-  <span>
-    <%= @post.user.first_name %>
-  </span>
+<div class="container">
+  <section class="item">
 
-</article>
+    <div class="post">
+      <article class="card-complete">
+        <span>
+          <%= @post.user.first_name %>
+        </span>
+        
+        <p>
+          <%=@post.content %>
+        </p>
+        
+      
+        <div class="card-extra">
+          <div class="likes">
+            <%= pluralize(@post.likes.count, 'Like') %>
+            <% if find_user_post(@post) %>
+              <%= button_to(post_like_path(@post, find_user_post(@post).id), method: :delete, class: 'btn-icon filled') do%>
+              <i data-feather="heart"></i>
+              <% end %>
+            <% else %>
+              <%= form_with(model: [@post, @post.likes.build], local: true) do |f| %>
+                <%= f.button :submit, class:'btn-icon' do %>
+                  <i data-feather="heart"></i>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+    
+          <div class="comments">
+            <%= pluralize(@post.comments.count, 'Comment') %>
+            <button class="btn-icon">
+              <i data-feather="message-circle"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+    
+      <div class="comment-section">
 
-<% if find_user_post(@post) %>
-  <%= button_to('dislike', post_like_path(@post, find_user_post(@post).id), method: :delete)%>
-<% else %>
-  <%= form_with(model: [@post, @post.likes.build], local: true) do |f| %>
-    <%= f.submit 'like' %>
-  <% end %>
-<% end %>
+        <%= form_with(model: [@post, @post.comments.build], local: true, html: { class: "form-comment" }) do |f| %>
+          <%= f.text_area :content, placeholder: 'Create a comment', class: 'comment-text-are' %>
+          <%= f.submit 'Comment', class: 'submmit-comment' %>
+        <% end %>
+        
+        
+        <ul class="comments-container">
+          <% @post.comments.right_order.each do |comment| %>
+            <li class="comment-item">
+              <span>
+                <%= comment.commenter.first_name %>
+              </span>
+              <p>
+                <%= comment.content%>
+              </p>
+              
+            </li>
+          <% end %>
+        </ul>
+        
+      </div>
+      
+    </div>
 
-
-
-
-
-<%= pluralize(@post.likes.count, 'like') %>
-
-<hr>
-
-
-<h3>
-  Create a comment:
-</h3>
-<%= form_with(model: [@post, @post.comments.build], local: true) do |f| %>
-  <%= f.text_area :content, placeholder: 'Write something...' %>
-  <%= f.submit 'Comment' %>
-<% end %>
-
-
-<ul>
-  <% @post.comments.right_order.each do |comment| %>
-    <li>
-      <p>
-        <%= comment.content%>
-      </p>
-      <span>
-        <%= comment.commenter.first_name %>
-      </span>
-    </li>
-  <% end %>
-</ul>
+    
+  </section>
+  
+</div>
 

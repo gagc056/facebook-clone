@@ -1,18 +1,32 @@
+<div class="container">
+  <div class="item">
+    
+    <ul class="list">
+      <% @friendship_request.each do |request| %>
+    
+      <li class="list-item">
+        <p class="list-desc">
+          <%= request.first_name %>
+        </p>
 
-<h3>
-  You have <%= pluralize(@friendship_request.count, 'notification') %>
-</h3>
+        <%= link_to friendship_path(request), :method=> :put, class: 'list-action' do%>
+        <i data-feather="user-plus"></i>
+          <%='Accept Friend' %>
+        <% end %>
+      </li>
+    <% end %>
+    
+    <% @pending_friends.each do |request| %>
+      <li class="list-item">
+        <p class="list-desc">
+          You have just sent a friend request to <strong> <%= request.first_name %> <%= request.last_name if request.last_name%></strong>
+        </p>
+      </li>
+    <% end %>
+  
+    </ul>
 
-<% @friendship_request.each do |request| %>
+  </div>
+</div>
 
-    <li>
-      <%= request.first_name %>
-      <%= link_to 'Accept Friend', friendship_path(request), :method=> :put %>
-    </li>
-<% end %>
 
-<% @pending_friends.each do |request| %>
-    <li>
-      You have just sent a friend request to <%= request.first_name %>
-    </li>
-<% end %>

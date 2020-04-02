@@ -1,17 +1,24 @@
-<h1>Posts: </h1>
+<div class="container">
+
+  <section class="item">
 
 
-<section>
-
-  <% @feed.each do |post| %>
-    <article>
-      <p>
-        <%= link_to("#{ post.content}", post_path(post)) %>
-      </p>
-      <span>
-        By: <%= post.user.first_name %>
-      </span>
-    </article>
-  <% end %>
-
-</section>
+    <div class="feed">
+      <% @feed.each do |post| %>
+  
+      <%= link_to post_path(post), class: 'card-link' do %>
+        <article class="card">
+          <span class="card-author">
+            <%= post.user.first_name %>
+          </span>
+          <p class="paragraph">
+            <%= post.content%>
+          </p>
+        </article>
+      <% end %>
+    <% end %>
+    </div>
+    
+  
+  </section>
+</div>
