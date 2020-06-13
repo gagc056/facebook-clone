@@ -1,10 +1,13 @@
+<div class="container">
+  <div class="item">
 
-<% if current_user %>
-<h2>
-  Create Post
-</h2>
-  <%= render 'form' %>
-<% else %>
-  <p>You need to login</p>
-<% end %>
+    <% if current_user %>
+      <%= render 'form' %>
+    <% else %>
+      <p>You need to login</p>
+    <% end %>
+  </div>
+</div>
+
+
 

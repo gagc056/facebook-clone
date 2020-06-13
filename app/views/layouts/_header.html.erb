@@ -1,29 +1,88 @@
-<header>
-
   <% if current_user %>
-    <%= link_to('Home', root_path) %> | 
+  <header class="side-header">
+    <div class="profile-info">
+      <p>
+        <%= current_user.first_name%>  <%= current_user.last_name if current_user.last_name%>
+      </p>
+    </div>
 
-    <%= link_to('Feed', posts_path)%> | 
 
-    <%= link_to('Friends', friends_path) %> | 
+    <nav class="nav-bar">
+      <%= link_to root_path, class: "nav-bar__link #{(current_page?(root_path)) ? "current" : ""}" do %>
+      <i data-feather="home"></i>
+      <%= 'Home' %>
+      <% end %>
 
-    <%= link_to('Search Friends', users_path) %> | 
+      <%= link_to friends_path, class: "nav-bar__link #{(current_page?(friends_path)) ? "current" : ""}" do %>
+      <i data-feather="users"></i>
+      <%= 'Friends' %>
+      <% end %>
 
-    <%= link_to("Notifications #{notification_status}", notifications_path) %> | 
+      <%= link_to posts_path, class: "nav-bar__link #{(current_page?(posts_path)) ? "current" : ""}" do %>
+      <i data-feather="hash"></i>
+      <%= 'Feed' %>
+      <% end %>
 
-    <%= link_to('Post', new_post_path) %> | 
+      <%= link_to users_path, class: "nav-bar__link #{(current_page?( users_path)) ? "current" : ""}" do %>
+      <i data-feather="search"></i>
+      <%= 'Search Friends' %>
+      <% end %>
 
-    <%= link_to('Profile', user_path(current_user.id)) %> | 
+      <%= link_to notifications_path, class: "nav-bar__link #{(current_page?(notifications_path)) ? "current" : ""}" do %>
+      <i data-feather="bell"></i>
+      <%= "Notifications ( #{notification_status} )" %>
+      <% end %>
 
-    <%= link_to('Log out', destroy_user_session_path, method: :delete) %>
+      
+      <%= link_to destroy_user_session_path, method: :delete, class: "nav-bar__link #{(current_page?(destroy_user_session_path)) ? "current" : ""}" do %>
+      <i data-feather="log-out"></i>
+      <%= "Log out" %>
+      <% end %>
+    </nav>
+  </header>
+
+  <div class="mobile-bar">
+    <%= link_to root_path, class: "mobile-bar__link #{(current_page?(root_path)) ? "mobile-current" : ""}" do %>
+    <i data-feather="home"></i>
+    <% end %>
+
+    <%= link_to friends_path, class: "mobile-bar__link #{(current_page?(friends_path)) ? "mobile-current" : ""}" do %>
+    <i data-feather="users"></i>
+    <% end %>
+
+    <%= link_to posts_path, class: "mobile-bar__link #{(current_page?(posts_path)) ? "mobile-current" : ""}" do %>
+    <i data-feather="hash"></i>
+    <% end %>
+
+    <%= link_to users_path, class: "mobile-bar__link #{(current_page?( users_path)) ? "mobile-current" : ""}" do %>
+    <i data-feather="search"></i>
+    <% end %>
+
+    <%= link_to notifications_path, class: "mobile-bar__link #{(current_page?(notifications_path)) ? "mobile-current" : ""}" do %>
+    <i data-feather="bell"></i>
+    <%= "( #{notification_status} )" %>
+    <% end %>
+
+    
+    <%= link_to destroy_user_session_path, method: :delete, class: "mobile-bar__link #{(current_page?(destroy_user_session_path)) ? "current" : ""}" do %>
+    <i data-feather="log-out"></i>
+    <% end %>
+  </div>
+
+  <%= link_to new_post_path, class: 'float' do %>
+      <i data-feather="edit-3"></i>
+      <% end %>
 
   <% else %>
-   
-  <%= link_to('Sign Up', new_user_registration_path) %> |
+    <header class="top-header">
 
-  <%= link_to('Sign In', user_session_path) %>
+      <% if  url_for(only_path: false).include?('up')%>
+        <%= link_to('Sign In', user_session_path, class: 'btn btn-main') %>
+        <% else %>
+        <%= link_to('Sign Up', new_user_registration_path, class: 'btn btn-main') %>
+      <% end %>
 
+  </header>
   <% end %>
   
 
-</header>

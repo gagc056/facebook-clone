@@ -1,0 +1,8 @@
+.post {
+  margin: auto;
+  width: 100%;
+
+  @media screen and (min-width: 720px) {
+    width: 80%;
+  }
+}

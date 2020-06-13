@@ -1,0 +1,55 @@
+@import '../abstracts/variables';
+
+.list {
+  width: 100%;
+  list-style: none;
+
+  @media screen and (min-width: 720px){
+    width: 80%;
+  }
+
+  &-item {
+    border-radius: 4px;
+    height: 66px;
+    background: $white-color;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+  }
+
+  &-desc {
+    color: $dark-color;
+    text-decoration: none;
+  }
+
+  &-action {
+    display: flex;
+    align-items: center;
+    background: $light-color;
+    border-radius: 22px;
+    height: 44px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+    color: $alt-dark-color;
+    border: none;
+    font-size: 16px;
+    & > svg {
+      margin-right: 8px;
+      stroke: $alt-dark-color;
+    }
+
+    &:hover {
+      background: $alt-main-color;
+      color: $main-color
+    }
+
+    &:hover {
+      & > svg {
+        stroke: $main-color
+      }
+    }
+  }
+}

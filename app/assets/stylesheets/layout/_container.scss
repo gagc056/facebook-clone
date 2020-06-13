@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+
+.root {
+  display: flex;
+  // background: $light-color;
+}
+
+.container {
+  height: 100%;
+
+  @media screen and (min-width: 720px) {
+    width: calc(100% - 320px);
+    float: right;
+  }
+
+  @media screen and (min-width: 1020px) {
+    width: calc(100% - 416px);
+  }
+
+  & > .item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 82px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.home {
+  width: 100%;
+
+  @media screen and (min-width: 720px){
+    width: 80%;
+  }
+}

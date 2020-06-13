@@ -1,0 +1,25 @@
+.post {
+  &-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    & > .btn {
+      width: 120px;
+      position: absolute;
+      bottom: 24px;
+      right: 116px;
+    }
+  }
+
+  &-create {
+    width: 80%;
+    height: 190px;
+    padding: 24px;
+    resize: none;
+  }
+
+  
+}

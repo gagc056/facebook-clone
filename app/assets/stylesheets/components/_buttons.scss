@@ -1,0 +1,65 @@
+@import '../abstracts/variables';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 26px;
+  border-radius: 22px;
+  height: 44px;
+  color: $alt-dark-color;
+  text-decoration: none;
+  transition: .5s all ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &-main {
+    color: $white-color;
+    background-color: $main-color;
+
+    &:hover {
+      box-shadow: 0px 8px 16px $alt-main-color;
+    }
+  }
+
+  &-facebook {
+    background-color: #4267B2;
+    width: 100%;
+    color: $white-color;
+    font-size: 12px;
+    margin-bottom: 32px;
+    &:hover {
+      box-shadow: 0px 8px 16px rgba(66, 103, 178, 0.424);
+    }
+  }
+
+  &-icon {
+    background: none;
+    // height: 28px;
+    // width: 28px;
+    border: none;
+    margin-left: 8px;
+
+    & > svg {
+      stroke: $alt-dark-color;
+    }
+
+    &:hover {
+      & > svg {
+        stroke: $main-color;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.filled {
+  & > svg {
+    fill: $main-color;
+    stroke: $main-color;
+  }
+}

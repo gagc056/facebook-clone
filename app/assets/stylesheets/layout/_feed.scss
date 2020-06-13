@@ -1,0 +1,10 @@
+@import '../abstracts/variables';
+
+.feed {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: $light-color;
+  width: 100%;
+}

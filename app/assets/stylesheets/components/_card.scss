@@ -1,0 +1,99 @@
+@import '../abstracts/variables';
+
+.card {
+  height: 120px;
+  background: $white-color;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100vw;
+  transition: box-shadow .3s ease-in-out;
+  @media screen and (min-width: 720px) {
+    width: 400px;
+  }
+  &-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .3);
+  }
+
+  & > .paragraph {
+    color: $alt-dark-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    @media screen and (min-width: 720px) {
+      font-size: 18px
+    }
+  }
+
+  & > span {
+    font-size: 12px;
+    color: $dark-color;
+    font-weight: 600;
+  }
+
+  &-complete {
+    background: $white-color;
+    padding: 32px;
+
+    & > span {
+      color: $dark-color;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 8px;
+      @media screen and (min-width: 720px) {
+        font-size: 18px
+      }
+    }
+
+    & > p {
+      color: $dark-color;
+      font-size: 18px;
+    }
+
+    & > .card-extra {
+      margin-top: 24px;
+
+      
+
+      & > .likes {
+        display: inline-flex;
+        height: 44px;
+        border-radius: 22px;
+        align-items: center;
+        padding: 16px;
+        color: $alt-dark-color;
+
+        &:hover {
+          background: $light-color;
+        }
+      }
+
+      & > .comments {
+        display: inline-flex;
+        height: 44px;
+        border-radius: 22px;
+        align-items: center;
+        padding: 16px;
+        color: $alt-dark-color;
+
+        &:hover {
+          background: $light-color;
+        }
+      }
+    }
+  }
+}
