@@ -78,7 +78,7 @@ This project was built using these technologies.
 <!-- CONTACT -->
 ## Contact
 
-[@lhscar56](https://github.com/lhscar56) - gagc056@gmail.com
+[@gagc056](https://github.com/gagc056) - gagc056@gmail.com
 <br />
 [@SantiagoGuerra](https://github.com/SantiagoGuerra) - guerrasantiago19@gmail.com
 
