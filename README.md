@@ -90,6 +90,14 @@ Project Link: [https://github.com/lhscar56/facebook-clone)
 * [The Odin Project](https://www.theodinproject.com/)
 * [Learn enough to be dangerous Ruby on Rails Tutorial](https://www.learnenough.com/ruby-on-rails-4th-edition-tutorial/)
 
+🤝 Contributing
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the issues page.
+
+Show your support
+Give a ⭐️ if you like this project!
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/lhscar56/facebook-clone.svg?style=flat-square
